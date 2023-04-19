@@ -5,6 +5,7 @@ import com.codeborne.selenide.Selenide;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import utils.ConfigProvider;
 
 public class BaseTest {
     public void setUp() {
@@ -18,6 +19,7 @@ public class BaseTest {
     @BeforeTest
     public void init() {
         setUp();
+        Selenide.open(ConfigProvider.URL);
     }
 
     @AfterTest
