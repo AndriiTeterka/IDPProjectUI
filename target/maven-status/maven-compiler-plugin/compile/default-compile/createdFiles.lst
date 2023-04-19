@@ -1,0 +1,14 @@
+pages\BasePage.class
+pages\OrderConfirmationPage.class
+pages\HeaderNavigationBar.class
+pages\CartPage.class
+pages\HomePage.class
+pages\SignInPage.class
+utils\LogUtils.class
+pages\MainMenuSidebar.class
+pages\CartSidebar.class
+utils\ConfigProvider.class
+pages\FooterNavigationBar.class
+pages\ItemsListPage.class
+pages\FiltersSidebar.class
+pages\OrderDetailsPage.class
