@@ -1,5 +1,7 @@
 package tests;
 
+import PageComponents.*;
+import Pages.*;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -8,7 +10,23 @@ import org.testng.annotations.BeforeTest;
 import utils.ConfigProvider;
 
 public class BaseTest {
-    public void setUp() {
+    protected CartPage cartPage;
+    protected CartSidebar cartSidebar;
+    protected FiltersSidebar filtersSidebar;
+    protected FooterNavigationBar footerNavigationBar;
+    protected HeaderNavigationBar headerNavigationBar;
+    protected SearchBar searchBar;
+
+    protected SearchResultsPage searchResultsPage;
+    protected AccountListFlyout accountListFlyout;
+    protected HomePage homePage;
+    protected ItemsListPage itemsListPage;
+    protected MainMenuSidebar mainMenuSidebar;
+    protected OrderConfirmationPage orderConfirmationPage;
+    protected OrderDetailsPage orderDetailsPage;
+    protected SignInPage signInPage;
+
+    public void driverSetUp() {
         //TODO implement driver factory
         WebDriverManager.chromedriver().setup();
         Configuration.browser = "chrome";
@@ -18,12 +36,34 @@ public class BaseTest {
 
     @BeforeTest
     public void init() {
-        setUp();
+        driverSetUp();
+        initPages();
+        initComponents();
         Selenide.open(ConfigProvider.URL);
     }
 
     @AfterTest
     public void tearDown() {
         Selenide.closeWebDriver();
+    }
+
+    public void initPages() {
+        cartPage = new CartPage();
+        homePage = new HomePage();
+        itemsListPage = new ItemsListPage();
+        orderConfirmationPage = new OrderConfirmationPage();
+        orderDetailsPage = new OrderDetailsPage();
+        signInPage = new SignInPage();
+        searchResultsPage = new SearchResultsPage();
+    }
+
+    public void initComponents() {
+        cartSidebar = new CartSidebar();
+        filtersSidebar = new FiltersSidebar();
+        footerNavigationBar = new FooterNavigationBar();
+        headerNavigationBar = new HeaderNavigationBar();
+        searchBar = new SearchBar();
+        accountListFlyout = new AccountListFlyout();
+        mainMenuSidebar = new MainMenuSidebar();
     }
 }

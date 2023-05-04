@@ -3,9 +3,9 @@
     <listeners>
         <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
     </listeners>
-    <test name="Sign In">
+    <test name="Sign In / Sign Out">
         <classes>
-            <class name="tests.SignIn.SuccessfulSignIn"/>
+            <class name="tests.Search.VerifyPreviousSearchIsDisplayedAsSuggestion"/>
         </classes>
     </test>
 </suite>
