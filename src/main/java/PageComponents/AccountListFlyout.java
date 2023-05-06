@@ -7,7 +7,7 @@ import utils.LogUtils;
 import static com.codeborne.selenide.Selenide.$;
 
 public class AccountListFlyout extends HeaderNavigationBar {
-    SelenideElement signOutLink = $("#nav-item-signout");
+    private final SelenideElement signOutLink = $("#nav-item-signout");
 
     @Step("Click on Sign Out link")
     public void clickOnSignOutLink() {

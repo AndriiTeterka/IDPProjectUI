@@ -22,8 +22,8 @@ public class BaseTest {
     protected HomePage homePage;
     protected ItemsListPage itemsListPage;
     protected MainMenuSidebar mainMenuSidebar;
-    protected OrderConfirmationPage orderConfirmationPage;
-    protected OrderDetailsPage orderDetailsPage;
+    protected ProductConfirmationPage productConfirmationPage;
+    protected ProductDetailsPage productDetailsPage;
     protected SignInPage signInPage;
 
     public void driverSetUp() {
@@ -51,8 +51,8 @@ public class BaseTest {
         cartPage = new CartPage();
         homePage = new HomePage();
         itemsListPage = new ItemsListPage();
-        orderConfirmationPage = new OrderConfirmationPage();
-        orderDetailsPage = new OrderDetailsPage();
+        productConfirmationPage = new ProductConfirmationPage();
+        productDetailsPage = new ProductDetailsPage();
         signInPage = new SignInPage();
         searchResultsPage = new SearchResultsPage();
     }

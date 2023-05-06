@@ -1,4 +1,4 @@
 package Pages;
 
-public class HomePage {
+public class HomePage extends BasePage {
 }

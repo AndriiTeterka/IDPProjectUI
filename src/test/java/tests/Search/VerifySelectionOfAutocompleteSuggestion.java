@@ -16,7 +16,7 @@ public class VerifySelectionOfAutocompleteSuggestion extends BaseTest {
         searchBar.clickOnSearchBar();
         searchBar.inputValueIntoSearchBar(searchValue);
         searchBar.clickOnSuggestionByOrder(4);
-        String suggestion = searchBar.searchBarGetText();
+        String suggestion = searchBar.getSearchBarText();
         searchResultsPage.verifySearchResultInfoBarContainsText(suggestion);
     }
 }

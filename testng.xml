@@ -5,7 +5,7 @@
     </listeners>
     <test name="Sign In / Sign Out">
         <classes>
-            <class name="tests.Search.VerifyPreviousSearchIsDisplayedAsSuggestion"/>
+            <class name="tests.Ordering.VerifySelectedProductFastestDeliveryDate"/>
         </classes>
     </test>
 </suite>

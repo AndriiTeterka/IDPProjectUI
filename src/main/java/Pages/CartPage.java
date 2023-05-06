@@ -1,4 +1,4 @@
 package Pages;
 
-public class CartPage {
+public class CartPage extends BasePage {
 }

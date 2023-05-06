@@ -14,9 +14,10 @@ import static com.codeborne.selenide.Selenide.$$x;
 
 public class SearchBar extends HeaderNavigationBar {
 
-    SelenideElement searchBar = $("#twotabsearchtextbox");
-    SelenideElement autocompleteFlyout = $("#nav-flyout-searchAjax");
-    ElementsCollection autocompleteFlyoutSuggestions = $$x("//div[@class='s-suggestion-container']/div[1]");
+    private final SelenideElement searchBar = $("#twotabsearchtextbox");
+    private final SelenideElement searchDropdown = $("#searchDropdownBox");
+    private final SelenideElement autocompleteFlyout = $("#nav-flyout-searchAjax");
+    private final ElementsCollection autocompleteFlyoutSuggestions = $$x("//div[@class='s-suggestion-container']/div[1]");
 
     @Step("Click on search bar")
     public void clickOnSearchBar() {
@@ -74,9 +75,15 @@ public class SearchBar extends HeaderNavigationBar {
         }
     }
 
-    @Step("Get text from Search Bar")
-    public String searchBarGetText() {
-        LogUtils.logInfoMessage("Get text from Search Bar");
+    @Step("Get Search Bar text")
+    public String getSearchBarText() {
+        LogUtils.logInfoMessage("Get Search Bar text");
         return searchBar.getValue();
+    }
+
+    @Step("Get text from selected Dropdown option")
+    public String searchDropdownSelectedGetText() {
+        LogUtils.logInfoMessage("Get text from selected Dropdown option");
+        return searchDropdown.getSelectedOptionText();
     }
 }

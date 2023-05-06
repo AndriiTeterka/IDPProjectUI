@@ -15,7 +15,7 @@ public class VerifyPreviousSearchIsDisplayedAsSuggestion extends BaseTest {
         searchBar.clickOnSearchBar();
         searchBar.inputValueIntoSearchBar(searchValue);
         searchBar.clickOnSuggestionByOrder(8);
-        String suggestion = searchBar.searchBarGetText();
+        String suggestion = searchBar.getSearchBarText();
         headerNavigationBar.clickOnHomePageLogo();
         searchBar.clickOnSearchBar();
         searchBar.verifyOneOfSuggestionsContainSearchValue(suggestion);

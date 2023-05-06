@@ -1,4 +1,4 @@
 package Pages;
 
-public class ItemsListPage {
+public class ItemsListPage extends BasePage {
 }

@@ -7,7 +7,7 @@ import utils.LogUtils;
 
 import static com.codeborne.selenide.Selenide.$;
 
-public class SignInPage {
+public class SignInPage extends BasePage {
     private final SelenideElement emailInput = $("#ap_email");
     private final SelenideElement passwordInput = $("#ap_password");
     private final SelenideElement continueButton = $("#continue");
