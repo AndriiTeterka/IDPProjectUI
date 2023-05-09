@@ -5,7 +5,7 @@
     </listeners>
     <test name="Sign In / Sign Out">
         <classes>
-            <class name="tests.Ordering.VerifySelectedProductFastestDeliveryDate"/>
+            <class name="tests.Ordering.Cart_Flyout.VerifyCartFlyoutGoToCartButtonRedirectsToCartPage"/>
         </classes>
     </test>
 </suite>

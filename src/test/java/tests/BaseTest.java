@@ -11,7 +11,7 @@ import utils.ConfigProvider;
 
 public class BaseTest {
     protected CartPage cartPage;
-    protected CartSidebar cartSidebar;
+    protected CartFlyout cartFlyout;
     protected FiltersSidebar filtersSidebar;
     protected FooterNavigationBar footerNavigationBar;
     protected HeaderNavigationBar headerNavigationBar;
@@ -24,6 +24,7 @@ public class BaseTest {
     protected MainMenuSidebar mainMenuSidebar;
     protected ProductConfirmationPage productConfirmationPage;
     protected ProductDetailsPage productDetailsPage;
+    protected ProductCheckoutPage productCheckoutPage;
     protected SignInPage signInPage;
 
     public void driverSetUp() {
@@ -55,10 +56,11 @@ public class BaseTest {
         productDetailsPage = new ProductDetailsPage();
         signInPage = new SignInPage();
         searchResultsPage = new SearchResultsPage();
+        productCheckoutPage = new ProductCheckoutPage();
     }
 
     public void initComponents() {
-        cartSidebar = new CartSidebar();
+        cartFlyout = new CartFlyout();
         filtersSidebar = new FiltersSidebar();
         footerNavigationBar = new FooterNavigationBar();
         headerNavigationBar = new HeaderNavigationBar();

@@ -57,4 +57,13 @@ public class SignInPage extends BasePage {
         LogUtils.logInfoMessage("Verify missing password alert text");
         missingPasswordAlert.shouldHave(Condition.exactText(error));
     }
+
+    @Step("Sign in existing user")
+    public void signInExistingUser(String email, String password) {
+        LogUtils.logInfoMessage("Sign in existing user");
+        enterEmail(email);
+        clickOnContinueButton();
+        enterPassword(password);
+        clickOnSignInButton();
+    }
 }

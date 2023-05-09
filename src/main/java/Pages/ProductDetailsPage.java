@@ -12,6 +12,7 @@ public class ProductDetailsPage extends BasePage {
     private final SelenideElement productPrice = $("#corePriceDisplay_desktop_feature_div");
     private final SelenideElement freeDeliveryDate = $("#mir-layout-DELIVERY_BLOCK-slot-PRIMARY_DELIVERY_MESSAGE_LARGE");
     private final SelenideElement fastestDeliveryDate = $("#mir-layout-DELIVERY_BLOCK-slot-SECONDARY_DELIVERY_MESSAGE_LARGE");
+    private final SelenideElement addToCartButton = $("#add-to-cart-button");
 
     @Step("Get product title text")
     public String getProductTitleText() {
@@ -37,5 +38,11 @@ public class ProductDetailsPage extends BasePage {
     public String getFastestDeliveryDateText() {
         LogUtils.logInfoMessage("Get fastest delivery date text");
         return fastestDeliveryDate.getText();
+    }
+
+    @Step("Click on Add to Cart button")
+    public void clickOnAddToCartButton() {
+        LogUtils.logInfoMessage("Click on Add to Cart button");
+        addToCartButton.click();
     }
 }
