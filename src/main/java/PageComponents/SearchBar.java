@@ -22,20 +22,20 @@ public class SearchBar extends HeaderNavigationBar {
     @Step("Click on search bar")
     public void clickOnSearchBar() {
         LogUtils.logInfoMessage("Click on search bar");
-        searchBar.click();
+        searchBar.shouldBe(Condition.visible).click();
     }
 
     @Step("Input value in search bar")
     public void inputValueIntoSearchBar(String value) {
         LogUtils.logInfoMessage("Input value in search bar");
-        searchBar.setValue(value);
+        searchBar.shouldBe(Condition.visible).setValue(value);
         verifyAutocompleteFlyoutSuggestionsAreDisplayed();
     }
 
     @Step("Search for item")
     public void searchForItem(String searchItem) {
         LogUtils.logInfoMessage("Search for item");
-        searchBar.setValue(searchItem);
+        searchBar.shouldBe(Condition.visible).setValue(searchItem);
         searchBar.pressEnter();
     }
 
@@ -48,7 +48,8 @@ public class SearchBar extends HeaderNavigationBar {
     @Step("Verify autocomplete flyout suggestions are displayed")
     public void verifyAutocompleteFlyoutSuggestionsAreDisplayed() {
         LogUtils.logInfoMessage("Verify autocomplete flyout suggestions are displayed");
-        autocompleteFlyoutSuggestions.shouldHave(CollectionCondition.sizeGreaterThanOrEqual(Integer.parseInt(ConfigProvider.SUGGESTIONS_QUANTITY)));
+        autocompleteFlyoutSuggestions.shouldHave(CollectionCondition
+                .sizeGreaterThanOrEqual(Integer.parseInt(ConfigProvider.SUGGESTIONS_QUANTITY)));
     }
 
     @Step("Verify all suggestions contain search value")
@@ -62,28 +63,29 @@ public class SearchBar extends HeaderNavigationBar {
     @Step("Verify one of suggestions contain search value")
     public void verifyOneOfSuggestionsContainSearchValue(String searchValue) {
         LogUtils.logInfoMessage("Verify one of suggestions contain search value");
-        autocompleteFlyoutSuggestions.shouldHave(CollectionCondition.anyMatch("text", x -> x.getText().contains(searchValue)));
+        autocompleteFlyoutSuggestions.shouldHave(CollectionCondition
+                .anyMatch("text", x -> x.getText().contains(searchValue)));
     }
 
     @Step("Click on suggestion by order")
     public void clickOnSuggestionByOrder(int order) {
         LogUtils.logInfoMessage("Click on suggestion by order");
         if (order >= 0 && order < autocompleteFlyoutSuggestions.size()) {
-            autocompleteFlyoutSuggestions.get(order).click();
+            autocompleteFlyoutSuggestions.get(order).shouldBe(Condition.visible).click();
         } else {
-            autocompleteFlyoutSuggestions.first().click();
+            autocompleteFlyoutSuggestions.first().shouldBe(Condition.visible).click();
         }
     }
 
     @Step("Get Search Bar text")
     public String getSearchBarText() {
         LogUtils.logInfoMessage("Get Search Bar text");
-        return searchBar.getValue();
+        return searchBar.shouldBe(Condition.visible).getValue();
     }
 
     @Step("Get text from selected Dropdown option")
     public String searchDropdownSelectedGetText() {
         LogUtils.logInfoMessage("Get text from selected Dropdown option");
-        return searchDropdown.getSelectedOptionText();
+        return searchDropdown.shouldBe(Condition.visible).getSelectedOptionText();
     }
 }

@@ -10,8 +10,8 @@ public class VerifySuccessfulSignIn extends BaseTest {
     @Description("Sign in with correct email and password")
     @Test
     public void verifySuccessfulSignIn() {
-        headerNavigationBar.clickOnSignInLink();
-        signInPage.enterEmail(ConfigProvider.EMAIL);
+        headerNavigationBar.clickOnAccountListLink();
+        signInPage.enterEmail(ConfigProvider.EMAIL1);
         signInPage.clickOnContinueButton();
         signInPage.enterPassword(ConfigProvider.PASSWORD);
         signInPage.clickOnSignInButton();

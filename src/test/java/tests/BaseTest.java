@@ -26,6 +26,9 @@ public class BaseTest {
     protected ProductDetailsPage productDetailsPage;
     protected ProductCheckoutPage productCheckoutPage;
     protected SignInPage signInPage;
+    protected YourAccountPage yourAccountPage;
+    protected YourAddressesPage yourAddressesPage;
+
 
     public void driverSetUp() {
         //TODO implement driver factory
@@ -33,6 +36,7 @@ public class BaseTest {
         Configuration.browser = "chrome";
         Configuration.driverManagerEnabled = true;
         Configuration.headless = false;
+        Configuration.timeout = 6000;
     }
 
     @BeforeTest
@@ -57,6 +61,8 @@ public class BaseTest {
         signInPage = new SignInPage();
         searchResultsPage = new SearchResultsPage();
         productCheckoutPage = new ProductCheckoutPage();
+        yourAccountPage = new YourAccountPage();
+        yourAddressesPage = new YourAddressesPage();
     }
 
     public void initComponents() {

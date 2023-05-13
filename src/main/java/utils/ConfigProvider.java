@@ -7,7 +7,8 @@ public interface ConfigProvider {
 
     //Credentials
     String URL = readConfig().getString("url");
-    String EMAIL = readConfig().getString("Credentials.correct.email");
+    String EMAIL1 = readConfig().getString("Credentials.correct.email1");
+    String EMAIL2 = readConfig().getString("Credentials.correct.email2");
     String PASSWORD = readConfig().getString("Credentials.correct.password");
     String USER_NAME = readConfig().getString("Credentials.correct.userName");
 
@@ -21,11 +22,11 @@ public interface ConfigProvider {
 
     //Page Titles
     String CART_PAGE_TITLE = readConfig().getString("PageTitles.cartPage");
+    String CHECKOUT_PAGE_TITLE = readConfig().getString("PageTitles.checkoutPage");
 
     //Other Messages
     String ADDED_TO_CART_CONFIRMATION_MESSAGE = readConfig().getString("OtherMessages.addedToCartConfirmationMessage");
     String REMOVED_FROM_SHOPPING_CART_MESSAGE = readConfig().getString("OtherMessages.removedFromShoppingCartMessage");
-    String CHECKOUT_HEADER_TEXT = readConfig().getString("OtherMessages.checkoutHeaderText");
 
     //Error messages
     String INCORRECT_EMAIL = readConfig().getString("Credentials.incorrect.email");

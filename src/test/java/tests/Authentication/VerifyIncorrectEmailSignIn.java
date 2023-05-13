@@ -10,7 +10,7 @@ public class VerifyIncorrectEmailSignIn extends BaseTest {
     @Description("Sign in with incorrect email")
     @Test
     public void verifyIncorrectEmailSignIn() {
-        headerNavigationBar.clickOnSignInLink();
+        headerNavigationBar.clickOnAccountListLink();
         signInPage.enterEmail(ConfigProvider.INCORRECT_EMAIL);
         signInPage.clickOnContinueButton();
         signInPage.verifyErrorMessageText(ConfigProvider.GENERAL_ERROR + "\n" + ConfigProvider.INCORRECT_EMAIL_ERROR);

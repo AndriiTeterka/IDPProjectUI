@@ -19,25 +19,25 @@ public class SignInPage extends BasePage {
     @Step("Enter user email")
     public void enterEmail(String email) {
         LogUtils.logInfoMessage("Enter user email");
-        emailInput.setValue(email);
+        emailInput.shouldBe(Condition.visible).setValue(email);
     }
 
     @Step("Enter user password")
     public void enterPassword(String password) {
         LogUtils.logInfoMessage("Enter user password");
-        passwordInput.setValue(password);
+        passwordInput.shouldBe(Condition.visible).setValue(password);
     }
 
     @Step("Click on Continue button")
     public void clickOnContinueButton() {
         LogUtils.logInfoMessage("Click on Continue button");
-        continueButton.click();
+        continueButton.shouldBe(Condition.visible).click();
     }
 
     @Step("Click on Sign In button")
     public void clickOnSignInButton() {
         LogUtils.logInfoMessage("Click on Sign In button");
-        signInButton.click();
+        signInButton.shouldBe(Condition.visible).click();
     }
 
     @Step("Verify error text")

@@ -1,5 +1,6 @@
 package PageComponents;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import io.qameta.allure.Step;
 import utils.LogUtils;
@@ -13,12 +14,12 @@ public class FiltersSidebar {
     @Step("Click on Departments first link")
     public void clickOnDepartmentsFirstLink() {
         LogUtils.logInfoMessage("Click on Departments first link");
-        departmentsLinks.first().click();
+        departmentsLinks.first().shouldBe(Condition.visible).click();
     }
 
     @Step("Get Departments first link text")
     public String departmentsFirstLinkGetText() {
         LogUtils.logInfoMessage("Get Departments first link text");
-        return departmentsLinks.first().getText();
+        return departmentsLinks.first().shouldBe(Condition.visible).getText();
     }
 }

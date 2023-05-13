@@ -12,8 +12,8 @@ public class VerifySignOut extends BaseTest {
     @Description("User sign out")
     @Test
     public void verifySignOut() {
-        headerNavigationBar.clickOnSignInLink();
-        signInPage.enterEmail(ConfigProvider.EMAIL);
+        headerNavigationBar.clickOnAccountListLink();
+        signInPage.enterEmail(ConfigProvider.EMAIL1);
         signInPage.clickOnContinueButton();
         signInPage.enterPassword(ConfigProvider.PASSWORD);
         signInPage.clickOnSignInButton();

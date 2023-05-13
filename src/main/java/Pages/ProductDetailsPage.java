@@ -1,5 +1,6 @@
 package Pages;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 import utils.LogUtils;
@@ -13,23 +14,24 @@ public class ProductDetailsPage extends BasePage {
     private final SelenideElement freeDeliveryDate = $("#mir-layout-DELIVERY_BLOCK-slot-PRIMARY_DELIVERY_MESSAGE_LARGE");
     private final SelenideElement fastestDeliveryDate = $("#mir-layout-DELIVERY_BLOCK-slot-SECONDARY_DELIVERY_MESSAGE_LARGE");
     private final SelenideElement addToCartButton = $("#add-to-cart-button");
+    private final SelenideElement buyNowButton = $("#buy-now-button");
 
     @Step("Get product title text")
     public String getProductTitleText() {
         LogUtils.logInfoMessage("Get product title text");
-        return productTitle.getText();
+        return productTitle.shouldBe(Condition.visible).getText();
     }
 
     @Step("Get product title text")
     public String getProductPriceText() {
         LogUtils.logInfoMessage("Get product price text");
-        return productPrice.getText();
+        return productPrice.shouldBe(Condition.visible).getText();
     }
 
     @Step("Get free delivery date text")
     public String getFreeDeliveryDateText() {
         LogUtils.logInfoMessage("Get free delivery date text");
-        String text = freeDeliveryDate.getText();
+        String text = freeDeliveryDate.shouldBe(Condition.visible).getText();
         String date = text.substring(text.indexOf("delivery") + 9, text.indexOf("."));
         return date.replaceAll("(\\b\\w{3})\\w+", "$1");
     }
@@ -37,12 +39,18 @@ public class ProductDetailsPage extends BasePage {
     @Step("Get fastest delivery date text")
     public String getFastestDeliveryDateText() {
         LogUtils.logInfoMessage("Get fastest delivery date text");
-        return fastestDeliveryDate.getText();
+        return fastestDeliveryDate.shouldBe(Condition.visible).getText();
     }
 
     @Step("Click on Add to Cart button")
     public void clickOnAddToCartButton() {
         LogUtils.logInfoMessage("Click on Add to Cart button");
-        addToCartButton.click();
+        addToCartButton.shouldBe(Condition.visible).click();
+    }
+
+    @Step("Click on Buy Now button")
+    public void clickOnBuyNowButton() {
+        LogUtils.logInfoMessage("Click on Buy Now button");
+        buyNowButton.shouldBe(Condition.visible).click();
     }
 }

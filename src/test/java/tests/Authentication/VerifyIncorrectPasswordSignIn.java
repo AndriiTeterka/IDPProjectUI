@@ -10,8 +10,8 @@ public class VerifyIncorrectPasswordSignIn extends BaseTest {
     @Description("Sign in with incorrect password")
     @Test
     public void verifyIncorrectPasswordSignIn() {
-        headerNavigationBar.clickOnSignInLink();
-        signInPage.enterEmail(ConfigProvider.EMAIL);
+        headerNavigationBar.clickOnAccountListLink();
+        signInPage.enterEmail(ConfigProvider.EMAIL1);
         signInPage.clickOnContinueButton();
         signInPage.enterPassword(ConfigProvider.INCORRECT_PASSWORD);
         signInPage.clickOnSignInButton();

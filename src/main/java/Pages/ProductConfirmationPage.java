@@ -22,6 +22,7 @@ public class ProductConfirmationPage extends BasePage {
         LogUtils.logInfoMessage("Verify product confirmation page is displayed");
         addedProductsDiv.shouldBe(Condition.visible);
     }
+
     @Step("Verify product image is displayed")
     public void verifyProductImageIsDisplayed() {
         LogUtils.logInfoMessage("Verify product image is displayed");
@@ -47,12 +48,12 @@ public class ProductConfirmationPage extends BasePage {
     @Step("Click on Go to Cart button")
     public void clickOnGoToCartButton() {
         LogUtils.logInfoMessage("Click on Go to Cart button");
-        goToCartButton.click();
+        goToCartButton.shouldBe(Condition.visible).click();
     }
 
     @Step("Click on Proceed to Checkout button")
     public void clickOnProceedToCheckoutButton() {
         LogUtils.logInfoMessage("Click on Proceed to Checkout button");
-        proceedToCheckoutButton.click();
+        proceedToCheckoutButton.shouldBe(Condition.visible).click();
     }
 }

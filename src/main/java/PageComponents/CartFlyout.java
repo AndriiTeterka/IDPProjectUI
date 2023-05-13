@@ -1,12 +1,12 @@
 package PageComponents;
 
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 import utils.LogUtils;
 
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.$x;
+import static com.codeborne.selenide.Selenide.*;
 
 public class CartFlyout {
 
@@ -17,6 +17,8 @@ public class CartFlyout {
     private final SelenideElement cartFlyoutProductLink = $x("//div[@id='ewc-compact-body']//a");
     private final SelenideElement cartFlyoutProductPrice = $x("//div[@id='ewc-compact-body']/div/div/div/div/span");
     private final SelenideElement cartFlyoutProductDeleteButton = $x("//input[@title='Delete']");
+    private final SelenideElement cartFlyoutQuantityDropdown = $x("//span[@data-a-class='quantity']");
+    private final ElementsCollection cartFlyoutQuantityDropdownOptions = $$x("//div[@id='a-popover-1']//li//input");
 
 
     @Step("Verify cart flyout is displayed")
@@ -36,13 +38,13 @@ public class CartFlyout {
     @Step("Click on Cart Flyout Go to Cart button")
     public void clickOnCartFlyoutGoToCartButton() {
         LogUtils.logInfoMessage("Click on Cart Flyout Go to Cart button");
-        cartFlyoutGoToCartButton.click();
+        cartFlyoutGoToCartButton.shouldBe(Condition.visible).click();
     }
 
     @Step("Click on Cart Flyout product link")
     public void clickOnCartFlyoutProductLink() {
         LogUtils.logInfoMessage("Click on Cart Flyout product link");
-        cartFlyoutProductLink.click();
+        cartFlyoutProductLink.shouldBe(Condition.visible).click();
     }
 
     @Step("Verify cart flyout product price")
@@ -64,6 +66,17 @@ public class CartFlyout {
     @Step("Click on Cart Flyout product delete button")
     public void clickOnCartFlyoutProductDeleteButton() {
         LogUtils.logInfoMessage("Click on Cart Flyout product delete button");
-        cartFlyoutProductDeleteButton.click();
+        cartFlyoutProductDeleteButton.shouldBe(Condition.visible).click();
+    }
+
+    @Step("Select cart flyout quantity option")
+    public void selectCartFlyoutQuantityOption(int quantityOption) {
+        LogUtils.logInfoMessage("Select cart flyout quantity option");
+        cartFlyoutQuantityDropdown.shouldBe(Condition.visible).click();
+        for (SelenideElement option : cartFlyoutQuantityDropdownOptions) {
+            if (option.getValue().equals(String.valueOf(quantityOption))) {
+                option.shouldBe(Condition.visible).click();
+            }
+        }
     }
 }

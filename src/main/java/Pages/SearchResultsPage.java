@@ -39,9 +39,9 @@ public class SearchResultsPage extends BasePage {
     public void selectSearchResultItemWithPriceByOrder(int order) {
         LogUtils.logInfoMessage("Select search result item with price by order");
         if (order >= 0 && order < getSearchResultItemsWithPrice().size()) {
-            getSearchResultItemsWithPrice().get(order).click();
+            getSearchResultItemsWithPrice().get(order).shouldBe(Condition.visible).click();
         } else {
-            getSearchResultItemsWithPrice().first().click();
+            getSearchResultItemsWithPrice().first().shouldBe(Condition.visible).click();
         }
     }
 
@@ -49,9 +49,9 @@ public class SearchResultsPage extends BasePage {
     public String searchResultItemWithPriceByOrderGetText(int order) {
         LogUtils.logInfoMessage("Get text of search result item with price by order");
         if (order >= 0 && order < getSearchResultItemsWithPrice().size()) {
-            return getSearchResultItemsWithPrice().get(order).getText();
+            return getSearchResultItemsWithPrice().get(order).shouldBe(Condition.visible).getText();
         } else {
-            return getSearchResultItemsWithPrice().first().getText();
+            return getSearchResultItemsWithPrice().first().shouldBe(Condition.visible).getText();
         }
     }
 
