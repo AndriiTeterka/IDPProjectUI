@@ -1,1 +1,0 @@
-{"uuid":"0a31a562-83a1-4adb-817e-4f941e83b0ca","name":"tests.Ordering.Order_Confirmation.VerifyProceedToCheckoutButtonRedirectsToProductCheckoutPage","children":["a98d660a-dac9-4947-a026-b0a266ae9893"],"befores":[],"afters":[],"start":1684945571576,"stop":1684945611847}
