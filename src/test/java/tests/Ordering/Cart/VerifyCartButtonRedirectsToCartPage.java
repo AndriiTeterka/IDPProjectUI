@@ -12,6 +12,6 @@ public class VerifyCartButtonRedirectsToCartPage extends BaseTest {
     @Test
     public void verifyCartButtonRedirectsToCartPage() {
         headerNavigationBar.clickOnCartButton();
-        Assert.assertTrue(cartPage.getPageTitle().contains(ConfigProvider.CART_PAGE_TITLE));
+        Assert.assertTrue(cartPage.getPageTitle().contains(ConfigProvider.CART_PAGE_TITLE), "Page title does not match");
     }
 }

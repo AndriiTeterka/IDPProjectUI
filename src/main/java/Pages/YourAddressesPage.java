@@ -1,6 +1,9 @@
 package Pages;
 
-import com.codeborne.selenide.*;
+import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.ElementsCollection;
+import com.codeborne.selenide.Selenide;
+import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 import utils.LogUtils;
 
@@ -14,22 +17,12 @@ public class YourAddressesPage extends BasePage {
     @Step("Remove all addresses")
     public void removeAllAddresses() {
         LogUtils.logInfoMessage("Remove all addresses");
-        try {
-            for (int i = 0; i <= removeAddressButtons.size(); i++) {
-                removeAddressButtons.get(i).shouldBe(Condition.visible).click();
-                confirmModalYesButton.pressTab().pressTab();
-                Selenide.sleep(2000);
-                confirmModalYesButton.pressEnter();
-                addressRemovedHeading.shouldBe(Condition.visible);
-            }
-        } catch (IndexOutOfBoundsException e) {
-            System.out.println(e);
+        while (removeAddressButtons.size() > 0) {
+            removeAddressButtons.first().shouldBe(Condition.visible).click();
+            //TODO
+            Selenide.sleep(1000);
+            confirmModalYesButton.doubleClick();
+            addressRemovedHeading.shouldBe(Condition.visible);
         }
-    }
-
-    @Step("Click on confirm modal Yes button")
-    public void clickOnConfirmModalYesButton() {
-        LogUtils.logInfoMessage("Click on confirm modal Yes button");
-        confirmModalYesButton.shouldBe(Condition.visible).click(ClickOptions.usingJavaScript());
     }
 }

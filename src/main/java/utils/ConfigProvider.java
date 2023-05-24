@@ -21,8 +21,13 @@ public interface ConfigProvider {
     String DEFAULT_SEARCH_DROPDOWN_VALUE = readConfig().getString("SearchParameters.defaultSearchDropdownValue");
 
     //Page Titles
+    String SIGN_IN_PAGE_TITLE = readConfig().getString("PageTitles.signInPage");
     String CART_PAGE_TITLE = readConfig().getString("PageTitles.cartPage");
     String CHECKOUT_PAGE_TITLE = readConfig().getString("PageTitles.checkoutPage");
+
+    //Main Menu Categories
+    String COMPUTERS_CATEGORY = readConfig().getString("MainMenuCategories.computers");
+    String MONITORS_CATEGORY = readConfig().getString("MainMenuCategories.monitors");
 
     //Other Messages
     String ADDED_TO_CART_CONFIRMATION_MESSAGE = readConfig().getString("OtherMessages.addedToCartConfirmationMessage");

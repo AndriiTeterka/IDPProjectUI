@@ -2,12 +2,12 @@ package Pages;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 import utils.LogUtils;
 
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.$$x;
+import static com.codeborne.selenide.Selenide.*;
 
 public class CartPage extends BasePage {
 
@@ -15,6 +15,9 @@ public class CartPage extends BasePage {
     private final ElementsCollection addedProductPrices = $$x("//div[@class='sc-item-content-group']//p");
     private final SelenideElement addedProductSubtotal = $("#sc-subtotal-amount-activecart");
     private final SelenideElement proceedToCheckoutButton = $("#sc-buy-box-ptc-button");
+    private final ElementsCollection addedProductsDeleteLink = $$x("//span[@data-feature-id='delete']//input");
+    private final SelenideElement emptyCartHeading = $x("//div[@id='sc-active-cart']//h1[@class]");
+    private final SelenideElement itemRemovedFromCartMessage = $x("//form[@id='activeCartViewForm']//div[@class='sc-list-item-removed-msg']");
 
     @Step("Verify added products title contains text")
     public boolean isAddedProductsTitleContainsText(String text) {
@@ -67,5 +70,17 @@ public class CartPage extends BasePage {
     public void clickOnProceedToCheckoutButton() {
         LogUtils.logInfoMessage("Click on Proceed to Checkout button");
         proceedToCheckoutButton.shouldBe(Condition.visible).click();
+    }
+
+    @Step("Remove all items from cart")
+    public void removeAllItemsFromCart() {
+        LogUtils.logInfoMessage("Remove all items from cart");
+        while (addedProductsDeleteLink.size() > 0) {
+            addedProductsDeleteLink.first().shouldBe(Condition.visible).click();
+            itemRemovedFromCartMessage.shouldBe(Condition.visible);
+            //TODO
+            Selenide.sleep(1000);
+        }
+        emptyCartHeading.shouldBe(Condition.visible);
     }
 }

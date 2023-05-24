@@ -1,5 +1,6 @@
 package tests.Ordering.Cart;
 
+import com.github.javafaker.Faker;
 import io.qameta.allure.Description;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -11,16 +12,20 @@ public class VerifyAddedToCartProductsSubtotal extends BaseTest {
     @Description("Verify added to cart products subtitle")
     @Test
     public void verifySelectedProductTitle() {
-        int order = 9;
-        int secondOrder = 2;
+        Faker faker = new Faker();
 
         searchBar.searchForItem(ConfigProvider.TV_NAME);
+        int order = faker.number().numberBetween(0, searchResultsPage.getSearchResultItemsWithPrice().size());
         searchResultsPage.selectSearchResultItemWithPriceByOrder(order);
         productDetailsPage.clickOnAddToCartButton();
         productConfirmationPage.pressBack(2);
-        searchResultsPage.selectSearchResultItemWithPriceByOrder(secondOrder);
+        int newOrder = faker.number().numberBetween(0, searchResultsPage.getSearchResultItemsWithPrice().size());
+        searchResultsPage.selectSearchResultItemWithPriceByOrder(newOrder);
         productDetailsPage.clickOnAddToCartButton();
         productConfirmationPage.clickOnGoToCartButton();
-        Assert.assertEquals(cartPage.calculateAddedProductsSubtotal(), cartPage.getAddedProductsSubtotalAsDouble());
+        Assert.assertEquals(cartPage.calculateAddedProductsSubtotal(), cartPage.getAddedProductsSubtotalAsDouble(), "Subtotal price does not match");
+
+        //Cart cleanup
+        cartPage.removeAllItemsFromCart();
     }
 }

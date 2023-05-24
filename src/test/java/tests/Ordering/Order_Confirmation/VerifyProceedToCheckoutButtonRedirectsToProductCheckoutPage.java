@@ -1,5 +1,6 @@
 package tests.Ordering.Order_Confirmation;
 
+import com.github.javafaker.Faker;
 import io.qameta.allure.Description;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -11,14 +12,20 @@ public class VerifyProceedToCheckoutButtonRedirectsToProductCheckoutPage extends
     @Description("Verify Proceed to Checkout button redirects to Product Checkout page")
     @Test
     public void verifyProceedToCheckoutButtonRedirectsToProductCheckoutPage() {
-        int order = 5;
+        Faker faker = new Faker();
 
-        headerNavigationBar.clickOnAccountListLink();
-        signInPage.signInExistingUser(ConfigProvider.EMAIL2, ConfigProvider.PASSWORD);
         searchBar.searchForItem(ConfigProvider.TV_NAME);
+        int order = faker.number().numberBetween(0, searchResultsPage.getSearchResultItemsWithPrice().size());
         searchResultsPage.selectSearchResultItemWithPriceByOrder(order);
         productDetailsPage.clickOnAddToCartButton();
         productConfirmationPage.clickOnProceedToCheckoutButton();
-        Assert.assertTrue(productCheckoutPage.getPageTitle().contains(ConfigProvider.CHECKOUT_PAGE_TITLE));
+        signInPage.signInExistingUser(ConfigProvider.EMAIL2, ConfigProvider.PASSWORD);
+        productCheckoutPage.clickOnShippingAddressLink();
+        Assert.assertTrue(productCheckoutPage.getPageTitle().contains(ConfigProvider.CHECKOUT_PAGE_TITLE), "Page title does not match");
+
+        //Cart cleanup
+        productCheckoutPage.clickOnHomePageLink();
+        productCheckoutPage.clickOnReturnToCartButton();
+        cartPage.removeAllItemsFromCart();
     }
 }

@@ -12,6 +12,7 @@ public class HeaderNavigationBar {
     private final SelenideElement homePageLogo = $("#nav-logo-sprites");
     private final SelenideElement cartButton = $("#nav-cart");
     private final SelenideElement cartButtonCounter = $("#nav-cart-count");
+    private final SelenideElement hamburgerMenuButton = $("#nav-hamburger-menu");
 
     @Step("Click on Account List link")
     public void clickOnAccountListLink() {
@@ -40,12 +41,19 @@ public class HeaderNavigationBar {
     @Step("Click on Cart button")
     public void clickOnCartButton() {
         LogUtils.logInfoMessage("Click on Cart button");
-        cartButton.shouldBe(Condition.visible).click();;
+        cartButton.shouldBe(Condition.visible).click();
+        ;
     }
 
     @Step("Verify Cart button counter text")
     public void verifyCarButtonCounterText(String text) {
         LogUtils.logInfoMessage("Verify Cart button counter text");
         cartButtonCounter.shouldHave(Condition.text(text));
+    }
+
+    @Step("Click on hamburger menu button")
+    public void clickOnHamburgerMenuButton() {
+        LogUtils.logInfoMessage("Click on hamburger menu button");
+        hamburgerMenuButton.shouldBe(Condition.visible).click();
     }
 }

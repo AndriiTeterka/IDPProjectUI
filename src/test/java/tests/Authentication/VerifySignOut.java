@@ -19,6 +19,6 @@ public class VerifySignOut extends BaseTest {
         signInPage.clickOnSignInButton();
         headerNavigationBar.hoverMouseOnSignInLink();
         accountListFlyout.clickOnSignOutLink();
-        Assert.assertEquals(Selenide.title(), "Amazon Sign-In");
+        Assert.assertEquals(signInPage.getPageTitle(), ConfigProvider.SIGN_IN_PAGE_TITLE, "Page title does not match");
     }
 }
