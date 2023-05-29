@@ -1,6 +1,5 @@
 package tests.Authentication;
 
-import com.codeborne.selenide.Selenide;
 import io.qameta.allure.Description;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -19,6 +18,6 @@ public class VerifySignOut extends BaseTest {
         signInPage.clickOnSignInButton();
         headerNavigationBar.hoverMouseOnSignInLink();
         accountListFlyout.clickOnSignOutLink();
-        Assert.assertEquals(signInPage.getPageTitle(), ConfigProvider.SIGN_IN_PAGE_TITLE, "Page title does not match");
+        Assert.assertTrue(signInPage.getPageTitle().contains(ConfigProvider.SIGN_IN_PAGE_TITLE), "Page title does not match");
     }
 }

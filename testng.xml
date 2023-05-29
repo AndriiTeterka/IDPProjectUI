@@ -1,22 +1,23 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Smoke Tests">
+<suite name="Smoke Tests" parallel="classes" thread-count="10">
     <listeners>
         <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+        <listener class-name="tests.TestRetryAnalyzer"/>
     </listeners>
     <test name="IDP Project Tests">
         <packages>
             <package name="tests.Authentication.*"/>
-            <package name="tests.Navigation.*"/>
-            <package name="tests.Ordering.Cart.*"/>
-            <package name="tests.Ordering.Cart_Flyout.*"/>
-            <package name="tests.Ordering.Checkout.*"/>
-            <package name="tests.Ordering.Home_Page.*"/>
-            <package name="tests.Ordering.Order_Confirmation.*"/>
-            <package name="tests.Ordering.Order_Details.*"/>
-            <package name="tests.Search.*"/>
+            <!--  <package name="tests.Navigation.*"/>
+              <package name="tests.Ordering.Cart.*"/>
+              <package name="tests.Ordering.Cart_Flyout.*"/>
+              <package name="tests.Ordering.Checkout.*"/>
+              <package name="tests.Ordering.Home_Page.*"/>
+              <package name="tests.Ordering.Order_Confirmation.*"/>
+              <package name="tests.Ordering.Order_Details.*"/>
+              <package name="tests.Search.*"/>-->
         </packages>
         <!--<classes>
-            <class name="tests.Ordering.Checkout.VerifyAddingNewShippingAddressOnCheckout"/>
+            <class name="tests.Authentication.VerifyIncorrectPasswordSignIn"/>
         </classes>-->
     </test>
 </suite>

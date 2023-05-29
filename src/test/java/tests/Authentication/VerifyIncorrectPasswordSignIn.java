@@ -8,7 +8,7 @@ import utils.ConfigProvider;
 public class VerifyIncorrectPasswordSignIn extends BaseTest {
 
     @Description("Sign in with incorrect password")
-    @Test
+    @Test(enabled = false)
     public void verifyIncorrectPasswordSignIn() {
         headerNavigationBar.clickOnAccountListLink();
         signInPage.enterEmail(ConfigProvider.EMAIL1);

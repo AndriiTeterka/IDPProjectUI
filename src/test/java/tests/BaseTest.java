@@ -5,8 +5,8 @@ import Pages.*;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import utils.ConfigProvider;
 
 public class BaseTest {
@@ -35,11 +35,11 @@ public class BaseTest {
         WebDriverManager.chromedriver().setup();
         Configuration.browser = "chrome";
         Configuration.driverManagerEnabled = true;
-        Configuration.headless = false;
+        Configuration.headless = true;
         Configuration.timeout = 6000;
     }
 
-    @BeforeTest
+    @BeforeMethod(alwaysRun = true)
     public void init() {
         driverSetUp();
         initPages();
@@ -47,7 +47,7 @@ public class BaseTest {
         Selenide.open(ConfigProvider.URL);
     }
 
-    @AfterTest
+    @AfterMethod(alwaysRun = true)
     public void tearDown() {
         Selenide.closeWebDriver();
     }
