@@ -5,19 +5,19 @@
         <listener class-name="tests.TestRetryAnalyzer"/>
     </listeners>
     <test name="IDP Project Tests">
-        <packages>
+      <!--  <packages>
             <package name="tests.Authentication.*"/>
-            <!--  <package name="tests.Navigation.*"/>
+            &lt;!&ndash;  <package name="tests.Navigation.*"/>
               <package name="tests.Ordering.Cart.*"/>
               <package name="tests.Ordering.Cart_Flyout.*"/>
               <package name="tests.Ordering.Checkout.*"/>
               <package name="tests.Ordering.Home_Page.*"/>
               <package name="tests.Ordering.Order_Confirmation.*"/>
               <package name="tests.Ordering.Order_Details.*"/>
-              <package name="tests.Search.*"/>-->
-        </packages>
-        <!--<classes>
-            <class name="tests.Authentication.VerifyIncorrectPasswordSignIn"/>
-        </classes>-->
+              <package name="tests.Search.*"/>&ndash;&gt;
+        </packages>-->
+        <classes>
+            <class name="tests.Authentication.VerifyIncorrectEmailSignIn"/>
+        </classes>
     </test>
 </suite>
