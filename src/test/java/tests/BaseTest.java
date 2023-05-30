@@ -45,7 +45,6 @@ public class BaseTest {
         initPages();
         initComponents();
         Selenide.open(ConfigProvider.URL);
-        getWebDriver().manage().window().maximize();
     }
 
     @AfterMethod(alwaysRun = true)
