@@ -1,11 +1,253 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
+<testng-results retried="2" ignored="1" total="8" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-05-29T20:20:07 EEST" name="Surefire suite" finished-at="2023-05-29T20:20:07 EEST" duration-ms="30">
+  <suite started-at="2023-05-30T16:59:52 EEST" name="Smoke Tests" finished-at="2023-05-30T17:00:29 EEST" duration-ms="37545">
     <groups>
     </groups>
-    <test started-at="2023-05-29T20:20:07 EEST" name="Surefire test" finished-at="2023-05-29T20:20:07 EEST" duration-ms="30">
-    </test> <!-- Surefire test -->
-  </suite> <!-- Surefire suite -->
+    <test started-at="2023-05-30T16:59:52 EEST" name="IDP Project Tests" finished-at="2023-05-30T17:00:29 EEST" duration-ms="37545">
+      <class name="tests.Authentication.VerifyEmptyEmailSignIn">
+        <test-method is-config="true" signature="init()[pri:0, instance:tests.Authentication.VerifyEmptyEmailSignIn@6850b758]" started-at="2023-05-30T16:59:52 EEST" name="init" finished-at="2023-05-30T17:00:11 EEST" duration-ms="19065" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="verifyEmptyEmailSignIn()[pri:0, instance:tests.Authentication.VerifyEmptyEmailSignIn@6850b758]" started-at="2023-05-30T17:00:11 EEST" name="verifyEmptyEmailSignIn" finished-at="2023-05-30T17:00:15 EEST" duration-ms="3238" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyEmptyEmailSignIn -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.Authentication.VerifyEmptyEmailSignIn@6850b758]" started-at="2023-05-30T17:00:15 EEST" name="tearDown" finished-at="2023-05-30T17:00:16 EEST" duration-ms="1229" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.Authentication.VerifyEmptyEmailSignIn -->
+      <class name="tests.Authentication.VerifyEmptyPasswordSignIn">
+        <test-method is-config="true" signature="init()[pri:0, instance:tests.Authentication.VerifyEmptyPasswordSignIn@743e66f7]" started-at="2023-05-30T16:59:52 EEST" name="init" finished-at="2023-05-30T17:00:07 EEST" duration-ms="14659" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method retried="true" signature="verifyEmptyPasswordSignIn()[pri:0, instance:tests.Authentication.VerifyEmptyPasswordSignIn@743e66f7]" started-at="2023-05-30T17:00:07 EEST" name="verifyEmptyPasswordSignIn" finished-at="2023-05-30T17:00:15 EEST" duration-ms="7486" status="SKIP">
+          <exception class="com.codeborne.selenide.ex.ElementNotFound">
+            <message>
+              <![CDATA[Element not found {#nav-link-accountList}
+Expected: visible
+Screenshot: file:/C:/Users/andrii.teterka/IdeaProjects/IDPProjectUI/build/reports/tests/1685455213777.0.png
+Page source: file:/C:/Users/andrii.teterka/IdeaProjects/IDPProjectUI/build/reports/tests/1685455213777.0.html
+Timeout: 6 s.
+Caused by: NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#nav-link-accountList"}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[Element not found {#nav-link-accountList}
+Expected: visible
+Screenshot: file:/C:/Users/andrii.teterka/IdeaProjects/IDPProjectUI/build/reports/tests/1685455213777.0.png
+Page source: file:/C:/Users/andrii.teterka/IdeaProjects/IDPProjectUI/build/reports/tests/1685455213777.0.html
+Timeout: 6 s.
+Caused by: NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#nav-link-accountList"}
+at com.codeborne.selenide.impl.WebElementSource.createElementNotFoundError(WebElementSource.java:88)
+at com.codeborne.selenide.impl.ElementFinder.createElementNotFoundError(ElementFinder.java:142)
+at com.codeborne.selenide.impl.WebElementSource.handleError(WebElementSource.java:140)
+at com.codeborne.selenide.impl.WebElementSource.checkConditionAndReturnElement(WebElementSource.java:124)
+at com.codeborne.selenide.impl.WebElementSource.checkCondition(WebElementSource.java:101)
+at com.codeborne.selenide.commands.Should.execute(Should.java:30)
+at com.codeborne.selenide.commands.Should.execute(Should.java:14)
+at com.codeborne.selenide.commands.Commands.execute(Commands.java:160)
+at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:132)
+at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:84)
+at jdk.proxy2/jdk.proxy2.$Proxy11.shouldBe(Unknown Source)
+at PageComponents.HeaderNavigationBar.clickOnAccountListLink(HeaderNavigationBar.java:20)
+at tests.Authentication.VerifyEmptyPasswordSignIn.verifyEmptyPasswordSignIn(VerifyEmptyPasswordSignIn.java:13)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1589)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#nav-link-accountList"}
+  (Session info: chrome=113.0.5672.127)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.8.3', revision: 'e5e76298c3'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3d4eaa8be2979b94ff3f3151faf361d9, findElement {using=css selector, value=#nav-link-accountList}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Program Files (x86)\scop...}, goog:chromeOptions: {debuggerAddress: localhost:54311}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54311/devtoo..., se:cdpVersion: 113.0.5672.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3d4eaa8be2979b94ff3f3151faf361d9
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+at com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:70)
+at com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:44)
+at com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:33)
+at com.codeborne.selenide.impl.ElementFinder.getWebElement(ElementFinder.java:122)
+at com.codeborne.selenide.impl.WebElementSource.checkConditionAndReturnElement(WebElementSource.java:113)
+... 22 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.codeborne.selenide.ex.ElementNotFound -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyEmptyPasswordSignIn -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.Authentication.VerifyEmptyPasswordSignIn@743e66f7]" started-at="2023-05-30T17:00:15 EEST" name="tearDown" finished-at="2023-05-30T17:00:17 EEST" duration-ms="2003" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="init()[pri:0, instance:tests.Authentication.VerifyEmptyPasswordSignIn@743e66f7]" started-at="2023-05-30T17:00:17 EEST" name="init" finished-at="2023-05-30T17:00:22 EEST" duration-ms="5892" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="verifyEmptyPasswordSignIn()[pri:0, instance:tests.Authentication.VerifyEmptyPasswordSignIn@743e66f7]" started-at="2023-05-30T17:00:22 EEST" name="verifyEmptyPasswordSignIn" finished-at="2023-05-30T17:00:26 EEST" duration-ms="3711" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyEmptyPasswordSignIn -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.Authentication.VerifyEmptyPasswordSignIn@743e66f7]" started-at="2023-05-30T17:00:26 EEST" name="tearDown" finished-at="2023-05-30T17:00:27 EEST" duration-ms="833" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.Authentication.VerifyEmptyPasswordSignIn -->
+      <class name="tests.Authentication.VerifyIncorrectEmailSignIn">
+        <test-method is-config="true" signature="init()[pri:0, instance:tests.Authentication.VerifyIncorrectEmailSignIn@109a2025]" started-at="2023-05-30T16:59:52 EEST" name="init" finished-at="2023-05-30T17:00:11 EEST" duration-ms="18273" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="verifyIncorrectEmailSignIn()[pri:0, instance:tests.Authentication.VerifyIncorrectEmailSignIn@109a2025]" started-at="2023-05-30T17:00:11 EEST" name="verifyIncorrectEmailSignIn" finished-at="2023-05-30T17:00:17 EEST" duration-ms="6025" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyIncorrectEmailSignIn -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.Authentication.VerifyIncorrectEmailSignIn@109a2025]" started-at="2023-05-30T17:00:17 EEST" name="tearDown" finished-at="2023-05-30T17:00:20 EEST" duration-ms="2890" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.Authentication.VerifyIncorrectEmailSignIn -->
+      <class name="tests.Authentication.VerifySuccessfulSignIn">
+        <test-method is-config="true" signature="init()[pri:0, instance:tests.Authentication.VerifySuccessfulSignIn@71978f46]" started-at="2023-05-30T16:59:52 EEST" name="init" finished-at="2023-05-30T17:00:09 EEST" duration-ms="16505" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method retried="true" signature="verifySuccessfulSignIn()[pri:0, instance:tests.Authentication.VerifySuccessfulSignIn@71978f46]" started-at="2023-05-30T17:00:09 EEST" name="verifySuccessfulSignIn" finished-at="2023-05-30T17:00:15 EEST" duration-ms="6724" status="SKIP">
+          <exception class="com.codeborne.selenide.ex.ElementNotFound">
+            <message>
+              <![CDATA[Element not found {#nav-link-accountList}
+Expected: visible
+Screenshot: file:/C:/Users/andrii.teterka/IdeaProjects/IDPProjectUI/build/reports/tests/1685455215421.1.png
+Page source: file:/C:/Users/andrii.teterka/IdeaProjects/IDPProjectUI/build/reports/tests/1685455215421.1.html
+Timeout: 6 s.
+Caused by: NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#nav-link-accountList"}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[Element not found {#nav-link-accountList}
+Expected: visible
+Screenshot: file:/C:/Users/andrii.teterka/IdeaProjects/IDPProjectUI/build/reports/tests/1685455215421.1.png
+Page source: file:/C:/Users/andrii.teterka/IdeaProjects/IDPProjectUI/build/reports/tests/1685455215421.1.html
+Timeout: 6 s.
+Caused by: NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#nav-link-accountList"}
+at com.codeborne.selenide.impl.WebElementSource.createElementNotFoundError(WebElementSource.java:88)
+at com.codeborne.selenide.impl.ElementFinder.createElementNotFoundError(ElementFinder.java:142)
+at com.codeborne.selenide.impl.WebElementSource.handleError(WebElementSource.java:140)
+at com.codeborne.selenide.impl.WebElementSource.checkConditionAndReturnElement(WebElementSource.java:124)
+at com.codeborne.selenide.impl.WebElementSource.checkCondition(WebElementSource.java:101)
+at com.codeborne.selenide.commands.Should.execute(Should.java:30)
+at com.codeborne.selenide.commands.Should.execute(Should.java:14)
+at com.codeborne.selenide.commands.Commands.execute(Commands.java:160)
+at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:132)
+at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:84)
+at jdk.proxy2/jdk.proxy2.$Proxy11.shouldBe(Unknown Source)
+at PageComponents.HeaderNavigationBar.clickOnAccountListLink(HeaderNavigationBar.java:20)
+at tests.Authentication.VerifySuccessfulSignIn.verifySuccessfulSignIn(VerifySuccessfulSignIn.java:13)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1589)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#nav-link-accountList"}
+  (Session info: chrome=113.0.5672.127)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.8.3', revision: 'e5e76298c3'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1c0d312789718b6619ded9d2c8043b36, findElement {using=css selector, value=#nav-link-accountList}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Program Files (x86)\scop...}, goog:chromeOptions: {debuggerAddress: localhost:54301}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54301/devtoo..., se:cdpVersion: 113.0.5672.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1c0d312789718b6619ded9d2c8043b36
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+at com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:70)
+at com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:44)
+at com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:33)
+at com.codeborne.selenide.impl.ElementFinder.getWebElement(ElementFinder.java:122)
+at com.codeborne.selenide.impl.WebElementSource.checkConditionAndReturnElement(WebElementSource.java:113)
+... 22 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.codeborne.selenide.ex.ElementNotFound -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySuccessfulSignIn -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.Authentication.VerifySuccessfulSignIn@71978f46]" started-at="2023-05-30T17:00:16 EEST" name="tearDown" finished-at="2023-05-30T17:00:17 EEST" duration-ms="1092" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="init()[pri:0, instance:tests.Authentication.VerifySuccessfulSignIn@71978f46]" started-at="2023-05-30T17:00:17 EEST" name="init" finished-at="2023-05-30T17:00:22 EEST" duration-ms="5785" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="verifySuccessfulSignIn()[pri:0, instance:tests.Authentication.VerifySuccessfulSignIn@71978f46]" started-at="2023-05-30T17:00:22 EEST" name="verifySuccessfulSignIn" finished-at="2023-05-30T17:00:29 EEST" duration-ms="6354" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySuccessfulSignIn -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.Authentication.VerifySuccessfulSignIn@71978f46]" started-at="2023-05-30T17:00:29 EEST" name="tearDown" finished-at="2023-05-30T17:00:29 EEST" duration-ms="627" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.Authentication.VerifySuccessfulSignIn -->
+      <class name="tests.Authentication.VerifySignOut">
+        <test-method is-config="true" signature="init()[pri:0, instance:tests.Authentication.VerifySignOut@761956ac]" started-at="2023-05-30T16:59:52 EEST" name="init" finished-at="2023-05-30T17:00:08 EEST" duration-ms="15457" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="verifySignOut()[pri:0, instance:tests.Authentication.VerifySignOut@761956ac]" started-at="2023-05-30T17:00:08 EEST" name="verifySignOut" finished-at="2023-05-30T17:00:20 EEST" duration-ms="12013" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySignOut -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.Authentication.VerifySignOut@761956ac]" started-at="2023-05-30T17:00:20 EEST" name="tearDown" finished-at="2023-05-30T17:00:24 EEST" duration-ms="4234" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.Authentication.VerifySignOut -->
+    </test> <!-- IDP Project Tests -->
+  </suite> <!-- Smoke Tests -->
 </testng-results>
