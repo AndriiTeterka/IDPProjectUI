@@ -35,6 +35,7 @@ public class BaseTest {
         //TODO implement driver factory
         WebDriverManager.chromedriver().setup();
         Configuration.driverManagerEnabled = true;
+        Configuration.headless = true;
         Configuration.timeout = 6000;
     }
 
