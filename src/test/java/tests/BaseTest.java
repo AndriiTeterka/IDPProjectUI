@@ -9,8 +9,6 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import utils.ConfigProvider;
 
-import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
-
 public class BaseTest {
     protected CartPage cartPage;
     protected CartFlyout cartFlyout;

@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Smoke_Tests" class="navigator-link">
-              <span class="suite-name border-skipped">Smoke Tests</span>
+              <span class="suite-name border-passed">Smoke Tests</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,26 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">7 methods,  2 skipped,  5 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title skipped">Retried methods</span>
-                    <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-Smoke_Tests" class="hide-methods skipped suite-Smoke_Tests"> (hide)</a> <!-- hide-methods skipped suite-Smoke_Tests -->
-                      <a href="#" panel-name="suite-Smoke_Tests" class="show-methods skipped suite-Smoke_Tests"> (show)</a> <!-- show-methods skipped suite-Smoke_Tests -->
-                    </span>
-                    <div class="method-list-content skipped suite-Smoke_Tests">
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Smoke_Tests" title="tests.Authentication.VerifyEmptyPasswordSignIn" class="method navigator-link" hash-for-method="verifyEmptyPasswordSignIn">verifyEmptyPasswordSignIn</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Smoke_Tests" title="tests.Authentication.VerifySuccessfulSignIn" class="method navigator-link" hash-for-method="verifySuccessfulSignIn">verifySuccessfulSignIn</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content skipped suite-Smoke_Tests -->
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -122,27 +103,7 @@
                     <div class="method-list-content passed suite-Smoke_Tests">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Smoke_Tests" title="tests.Authentication.VerifyEmptyEmailSignIn" class="method navigator-link" hash-for-method="verifyEmptyEmailSignIn">verifyEmptyEmailSignIn</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Smoke_Tests" title="tests.Authentication.VerifyEmptyPasswordSignIn" class="method navigator-link" hash-for-method="verifyEmptyPasswordSignIn">verifyEmptyPasswordSignIn</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Smoke_Tests" title="tests.Authentication.VerifyIncorrectEmailSignIn" class="method navigator-link" hash-for-method="verifyIncorrectEmailSignIn">verifyIncorrectEmailSignIn</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Smoke_Tests" title="tests.Authentication.VerifySignOut" class="method navigator-link" hash-for-method="verifySignOut">verifySignOut</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Smoke_Tests" title="tests.Authentication.VerifySuccessfulSignIn" class="method navigator-link" hash-for-method="verifySuccessfulSignIn">verifySuccessfulSignIn</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Smoke_Tests -->
@@ -157,181 +118,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Smoke_Tests" class="panel Smoke_Tests">
-          <div class="suite-Smoke_Tests-class-skipped">
-            <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
-              <span class="class-name">tests.Authentication.VerifySuccessfulSignIn</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifySuccessfulSignIn">
-                  </a> <!-- verifySuccessfulSignIn -->
-                  <span class="method-name">verifySuccessfulSignIn</span>
-                  <div class="stack-trace">Element not found {#nav-link-accountList}
-Expected: visible
-Screenshot: file:/C:/Users/andrii.teterka/IdeaProjects/IDPProjectUI/build/reports/tests/1685455215421.1.png
-Page source: file:/C:/Users/andrii.teterka/IdeaProjects/IDPProjectUI/build/reports/tests/1685455215421.1.html
-Timeout: 6 s.
-Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#nav-link-accountList&quot;}
-	at com.codeborne.selenide.impl.WebElementSource.createElementNotFoundError(WebElementSource.java:88)
-	at com.codeborne.selenide.impl.ElementFinder.createElementNotFoundError(ElementFinder.java:142)
-	at com.codeborne.selenide.impl.WebElementSource.handleError(WebElementSource.java:140)
-	at com.codeborne.selenide.impl.WebElementSource.checkConditionAndReturnElement(WebElementSource.java:124)
-	at com.codeborne.selenide.impl.WebElementSource.checkCondition(WebElementSource.java:101)
-	at com.codeborne.selenide.commands.Should.execute(Should.java:30)
-	at com.codeborne.selenide.commands.Should.execute(Should.java:14)
-	at com.codeborne.selenide.commands.Commands.execute(Commands.java:160)
-	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:132)
-	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:84)
-	at jdk.proxy2/jdk.proxy2.$Proxy11.shouldBe(Unknown Source)
-	at PageComponents.HeaderNavigationBar.clickOnAccountListLink(HeaderNavigationBar.java:20)
-	at tests.Authentication.VerifySuccessfulSignIn.verifySuccessfulSignIn(VerifySuccessfulSignIn.java:13)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1589)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#nav-link-accountList&quot;}
-  (Session info: chrome=113.0.5672.127)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: &apos;4.8.3&apos;, revision: &apos;e5e76298c3&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1c0d312789718b6619ded9d2c8043b36, findElement {using=css selector, value=#nav-link-accountList}]
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Program Files (x86)\scop...}, goog:chromeOptions: {debuggerAddress: localhost:54301}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54301/devtoo..., se:cdpVersion: 113.0.5672.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1c0d312789718b6619ded9d2c8043b36
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:70)
-	at com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:44)
-	at com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:33)
-	at com.codeborne.selenide.impl.ElementFinder.getWebElement(ElementFinder.java:122)
-	at com.codeborne.selenide.impl.WebElementSource.checkConditionAndReturnElement(WebElementSource.java:113)
-	... 22 more
-... Removed 13 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Smoke_Tests-class-skipped -->
-          <div class="suite-Smoke_Tests-class-skipped">
-            <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
-              <span class="class-name">tests.Authentication.VerifyEmptyPasswordSignIn</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyEmptyPasswordSignIn">
-                  </a> <!-- verifyEmptyPasswordSignIn -->
-                  <span class="method-name">verifyEmptyPasswordSignIn</span>
-                  <div class="stack-trace">Element not found {#nav-link-accountList}
-Expected: visible
-Screenshot: file:/C:/Users/andrii.teterka/IdeaProjects/IDPProjectUI/build/reports/tests/1685455213777.0.png
-Page source: file:/C:/Users/andrii.teterka/IdeaProjects/IDPProjectUI/build/reports/tests/1685455213777.0.html
-Timeout: 6 s.
-Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#nav-link-accountList&quot;}
-	at com.codeborne.selenide.impl.WebElementSource.createElementNotFoundError(WebElementSource.java:88)
-	at com.codeborne.selenide.impl.ElementFinder.createElementNotFoundError(ElementFinder.java:142)
-	at com.codeborne.selenide.impl.WebElementSource.handleError(WebElementSource.java:140)
-	at com.codeborne.selenide.impl.WebElementSource.checkConditionAndReturnElement(WebElementSource.java:124)
-	at com.codeborne.selenide.impl.WebElementSource.checkCondition(WebElementSource.java:101)
-	at com.codeborne.selenide.commands.Should.execute(Should.java:30)
-	at com.codeborne.selenide.commands.Should.execute(Should.java:14)
-	at com.codeborne.selenide.commands.Commands.execute(Commands.java:160)
-	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:132)
-	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:84)
-	at jdk.proxy2/jdk.proxy2.$Proxy11.shouldBe(Unknown Source)
-	at PageComponents.HeaderNavigationBar.clickOnAccountListLink(HeaderNavigationBar.java:20)
-	at tests.Authentication.VerifyEmptyPasswordSignIn.verifyEmptyPasswordSignIn(VerifyEmptyPasswordSignIn.java:13)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1589)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#nav-link-accountList&quot;}
-  (Session info: chrome=113.0.5672.127)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: &apos;4.8.3&apos;, revision: &apos;e5e76298c3&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3d4eaa8be2979b94ff3f3151faf361d9, findElement {using=css selector, value=#nav-link-accountList}]
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Program Files (x86)\scop...}, goog:chromeOptions: {debuggerAddress: localhost:54311}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54311/devtoo..., se:cdpVersion: 113.0.5672.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3d4eaa8be2979b94ff3f3151faf361d9
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:70)
-	at com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:44)
-	at com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:33)
-	at com.codeborne.selenide.impl.ElementFinder.getWebElement(ElementFinder.java:122)
-	at com.codeborne.selenide.impl.WebElementSource.checkConditionAndReturnElement(WebElementSource.java:113)
-	... 22 more
-... Removed 13 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Smoke_Tests-class-skipped -->
-          <div class="suite-Smoke_Tests-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">tests.Authentication.VerifySuccessfulSignIn</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifySuccessfulSignIn">
-                  </a> <!-- verifySuccessfulSignIn -->
-                  <span class="method-name">verifySuccessfulSignIn</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Smoke_Tests-class-passed -->
-          <div class="suite-Smoke_Tests-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">tests.Authentication.VerifyEmptyPasswordSignIn</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyEmptyPasswordSignIn">
-                  </a> <!-- verifyEmptyPasswordSignIn -->
-                  <span class="method-name">verifyEmptyPasswordSignIn</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Smoke_Tests-class-passed -->
-          <div class="suite-Smoke_Tests-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">tests.Authentication.VerifyEmptyEmailSignIn</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyEmptyEmailSignIn">
-                  </a> <!-- verifyEmptyEmailSignIn -->
-                  <span class="method-name">verifyEmptyEmailSignIn</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Smoke_Tests-class-passed -->
           <div class="suite-Smoke_Tests-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -343,21 +129,6 @@ Session ID: 3d4eaa8be2979b94ff3f3151faf361d9
                   <a name="verifyIncorrectEmailSignIn">
                   </a> <!-- verifyIncorrectEmailSignIn -->
                   <span class="method-name">verifyIncorrectEmailSignIn</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Smoke_Tests-class-passed -->
-          <div class="suite-Smoke_Tests-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">tests.Authentication.VerifySignOut</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifySignOut">
-                  </a> <!-- verifySignOut -->
-                  <span class="method-name">verifySignOut</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -377,16 +148,8 @@ Session ID: 3d4eaa8be2979b94ff3f3151faf361d9
     &lt;listener class-name=&quot;tests.TestRetryAnalyzer&quot;/&gt;
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;10&quot; parallel=&quot;classes&quot; name=&quot;IDP Project Tests&quot; verbose=&quot;0&quot;&gt;
-    &lt;packages&gt;
-      &lt;package name=&quot;tests.Authentication.*&quot;/&gt;
-    &lt;/packages&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;tests.Authentication.VerifyEmptyEmailSignIn&quot;/&gt;
-      &lt;class name=&quot;tests.Authentication.VerifyEmptyPasswordSignIn&quot;/&gt;
       &lt;class name=&quot;tests.Authentication.VerifyIncorrectEmailSignIn&quot;/&gt;
-      &lt;class name=&quot;tests.Authentication.VerifyIncorrectPasswordSignIn&quot;/&gt;
-      &lt;class name=&quot;tests.Authentication.VerifySignOut&quot;/&gt;
-      &lt;class name=&quot;tests.Authentication.VerifySuccessfulSignIn&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- IDP Project Tests --&gt;
 &lt;/suite&gt; &lt;!-- Smoke Tests --&gt;
@@ -400,7 +163,7 @@ Session ID: 3d4eaa8be2979b94ff3f3151faf361d9
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">IDP Project Tests (6 classes)</span>
+                <span class="test-name">IDP Project Tests (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -426,40 +189,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(7);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifySignOut')
-data.setCell(0, 2, 'tests.Authentication.VerifySignOut')
-data.setCell(0, 3, 12013);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyEmptyPasswordSignIn')
-data.setCell(1, 2, 'tests.Authentication.VerifyEmptyPasswordSignIn')
-data.setCell(1, 3, 7486);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifySuccessfulSignIn')
-data.setCell(2, 2, 'tests.Authentication.VerifySuccessfulSignIn')
-data.setCell(2, 3, 6724);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'verifySuccessfulSignIn')
-data.setCell(3, 2, 'tests.Authentication.VerifySuccessfulSignIn')
-data.setCell(3, 3, 6354);
-data.setCell(4, 0, 4)
-data.setCell(4, 1, 'verifyIncorrectEmailSignIn')
-data.setCell(4, 2, 'tests.Authentication.VerifyIncorrectEmailSignIn')
-data.setCell(4, 3, 6025);
-data.setCell(5, 0, 5)
-data.setCell(5, 1, 'verifyEmptyPasswordSignIn')
-data.setCell(5, 2, 'tests.Authentication.VerifyEmptyPasswordSignIn')
-data.setCell(5, 3, 3711);
-data.setCell(6, 0, 6)
-data.setCell(6, 1, 'verifyEmptyEmailSignIn')
-data.setCell(6, 2, 'tests.Authentication.VerifyEmptyEmailSignIn')
-data.setCell(6, 3, 3238);
+data.setCell(0, 1, 'verifyIncorrectEmailSignIn')
+data.setCell(0, 2, 'tests.Authentication.VerifyIncorrectEmailSignIn')
+data.setCell(0, 3, 3207);
 window.suiteTableData['Smoke_Tests']= { tableData: data, tableDiv: 'times-div-Smoke_Tests'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 45 seconds</span>
+              <span class="suite-total-time">Total running time: 3 seconds</span>
               <div id="times-div-Smoke_Tests">
               </div> <!-- times-div-Smoke_Tests -->
             </div> <!-- times-div -->
@@ -474,16 +213,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Smoke_Tests" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">1 ignored method</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">tests.Authentication.VerifyIncorrectPasswordSignIn</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">verifyIncorrectPasswordSignIn</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Smoke_Tests" class="panel">
@@ -492,144 +224,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">tests.Authentication.VerifyEmptyEmailSignIn</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">tests.Authentication.VerifyIncorrectEmailSignIn</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">init</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.Authentication.VerifyIncorrectEmailSignIn</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">init</span>
-                <span class="method-start">1 ms</span>
-              </div> <!-- configuration-method before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.Authentication.VerifySuccessfulSignIn</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">init</span>
-                <span class="method-start">1 ms</span>
-              </div> <!-- configuration-method before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.Authentication.VerifySignOut</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">init</span>
-                <span class="method-start">1 ms</span>
-              </div> <!-- configuration-method before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.Authentication.VerifyEmptyPasswordSignIn</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">init</span>
-                <span class="method-start">1 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">verifyEmptyPasswordSignIn</span>
-                <span class="method-start">14778 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.Authentication.VerifySignOut</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">verifySignOut</span>
-                <span class="method-start">15485 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.Authentication.VerifySuccessfulSignIn</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">verifySuccessfulSignIn</span>
-                <span class="method-start">16511 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.Authentication.VerifyIncorrectEmailSignIn</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">verifyIncorrectEmailSignIn</span>
-                <span class="method-start">18350 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.Authentication.VerifyEmptyEmailSignIn</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">verifyEmptyEmailSignIn</span>
-                <span class="method-start">19079 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.Authentication.VerifyEmptyPasswordSignIn</div> <!-- chronological-class-name -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">22322 ms</span>
-              </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.Authentication.VerifyEmptyEmailSignIn</div> <!-- chronological-class-name -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">22325 ms</span>
-              </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.Authentication.VerifySuccessfulSignIn</div> <!-- chronological-class-name -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">23270 ms</span>
-              </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.Authentication.VerifyEmptyPasswordSignIn</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">init</span>
-                <span class="method-start">24329 ms</span>
-              </div> <!-- configuration-method before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.Authentication.VerifySuccessfulSignIn</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">init</span>
-                <span class="method-start">24366 ms</span>
-              </div> <!-- configuration-method before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.Authentication.VerifyIncorrectEmailSignIn</div> <!-- chronological-class-name -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">24397 ms</span>
-              </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.Authentication.VerifySignOut</div> <!-- chronological-class-name -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">27502 ms</span>
-              </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.Authentication.VerifySuccessfulSignIn</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">verifySuccessfulSignIn</span>
-                <span class="method-start">30155 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.Authentication.VerifyEmptyPasswordSignIn</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">verifyEmptyPasswordSignIn</span>
-                <span class="method-start">30224 ms</span>
+                <span class="method-start">13303 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">33941 ms</span>
-              </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.Authentication.VerifySuccessfulSignIn</div> <!-- chronological-class-name -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">36513 ms</span>
+                <span class="method-start">16532 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
