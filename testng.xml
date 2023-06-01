@@ -2,6 +2,7 @@
 <suite name="IDP Project Tests" parallel="classes" thread-count="1">
     <listeners>
         <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+        <listener class-name="io.qameta.allure.selenide.AllureSelenide"/>
         <listener class-name="tests.TestRetryAnalyzer"/>
     </listeners>
     <test name="Smoke Tests">
