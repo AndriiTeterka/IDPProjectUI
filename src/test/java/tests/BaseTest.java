@@ -35,16 +35,8 @@ public class BaseTest {
         Configuration.driverManagerEnabled = true;
         Configuration.headless = true;
         Configuration.timeout = 6000;
-        Configuration.reportsFolder = "target/allure-results/screenshots";
+        Configuration.reportsFolder = "allure-results/screenshots";
     }
-
-    /*@BeforeSuite
-    static void setupAllureReports() {
-        SelenideLogger.addListener("AllureSelenide", new AllureSelenide()
-                .screenshots(true)
-                .savePageSource(false)
-        );
-    }*/
 
     @BeforeMethod(alwaysRun = true)
     public void init() {
