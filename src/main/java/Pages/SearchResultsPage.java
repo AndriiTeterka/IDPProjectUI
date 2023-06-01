@@ -7,6 +7,7 @@ import io.qameta.allure.Step;
 import utils.LogUtils;
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 
@@ -39,9 +40,9 @@ public class SearchResultsPage extends BasePage {
     public void selectSearchResultItemWithPriceByOrder(int order) {
         LogUtils.logInfoMessage("Select search result item with price by order");
         if (order >= 0 && order < getSearchResultItemsWithPrice().size()) {
-            getSearchResultItemsWithPrice().get(order).shouldBe(Condition.visible).click();
+            getSearchResultItemsWithPrice().get(order).$x(".//h2/a").shouldBe(visible).click();
         } else {
-            getSearchResultItemsWithPrice().first().shouldBe(Condition.visible).click();
+            getSearchResultItemsWithPrice().first().$x(".//h2/a").shouldBe(visible).click();
         }
     }
 
