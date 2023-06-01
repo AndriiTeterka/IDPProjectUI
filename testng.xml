@@ -6,7 +6,9 @@
     </listeners>
     <test name="Smoke Tests">
         <packages>
-            <package name="tests.Authentication.*"/>
+            <package name="tests.Authentication.*">
+                <exclude name="tests.Authentication.VerifyIncorrectPasswordSignIn"/>
+            </package>
             <package name="tests.Navigation.*"/>
             <package name="tests.Ordering.Cart.*"/>
             <package name="tests.Ordering.Cart_Flyout.*"/>

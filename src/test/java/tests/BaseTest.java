@@ -4,9 +4,12 @@ import PageComponents.*;
 import Pages.*;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
+import com.codeborne.selenide.logevents.SelenideLogger;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.qameta.allure.selenide.AllureSelenide;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import utils.ConfigProvider;
 
 public class BaseTest {
@@ -35,6 +38,14 @@ public class BaseTest {
         Configuration.driverManagerEnabled = true;
         Configuration.headless = true;
         Configuration.timeout = 6000;
+    }
+
+    @BeforeSuite
+    static void setupAllureReports() {
+        SelenideLogger.addListener("AllureSelenide", new AllureSelenide()
+                .screenshots(true)
+                .savePageSource(false)
+        );
     }
 
     @BeforeMethod(alwaysRun = true)
