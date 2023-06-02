@@ -6,6 +6,7 @@ import io.qameta.allure.Step;
 import utils.LogUtils;
 
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.$x;
 
 public class ProductDetailsPage extends BasePage {
 
@@ -15,6 +16,8 @@ public class ProductDetailsPage extends BasePage {
     private final SelenideElement fastestDeliveryDate = $("#mir-layout-DELIVERY_BLOCK-slot-SECONDARY_DELIVERY_MESSAGE_LARGE");
     private final SelenideElement addToCartButton = $("#add-to-cart-button");
     private final SelenideElement buyNowButton = $("#buy-now-button");
+    private final SelenideElement warrantyWindow = $x("//div[@id='attach-warranty-display']");
+    private final SelenideElement warrantyNoThanksButton = $x("//*[@id='attach-warranty-display']//span[contains(text(), 'No Thanks')]//../input");
 
     @Step("Get product title text")
     public String getProductTitleText() {
@@ -46,11 +49,19 @@ public class ProductDetailsPage extends BasePage {
     public void clickOnAddToCartButton() {
         LogUtils.logInfoMessage("Click on Add to Cart button");
         addToCartButton.shouldBe(Condition.visible).click();
+        dismissWarrantyIfDisplayed();
     }
 
     @Step("Click on Buy Now button")
     public void clickOnBuyNowButton() {
         LogUtils.logInfoMessage("Click on Buy Now button");
         buyNowButton.shouldBe(Condition.visible).click();
+    }
+    
+    public void dismissWarrantyIfDisplayed() {
+        LogUtils.logInfoMessage("Dismiss warranty if displayed");
+        if (warrantyWindow.isDisplayed()) {
+            warrantyNoThanksButton.shouldBe(Condition.visible).click();
+        }
     }
 }
