@@ -86,6 +86,6 @@ public class SearchBar extends HeaderNavigationBar {
     @Step("Get text from selected Dropdown option")
     public String searchDropdownSelectedGetText() {
         LogUtils.logInfoMessage("Get text from selected Dropdown option");
-        return searchDropdown.shouldBe(Condition.visible).getSelectedOptionText();
+        return searchDropdown.getSelectedOptionText();
     }
 }

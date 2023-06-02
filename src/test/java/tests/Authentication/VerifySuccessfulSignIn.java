@@ -11,7 +11,7 @@ public class VerifySuccessfulSignIn extends BaseTest {
     @Test
     public void verifySuccessfulSignIn() {
         headerNavigationBar.clickOnAccountListLink();
-        signInPage.enterEmail(ConfigProvider.EMAIL1);
+        signInPage.enterEmail(ConfigProvider.EMAIL2);
         signInPage.clickOnContinueButton();
         signInPage.enterPassword(ConfigProvider.PASSWORD);
         signInPage.clickOnSignInButton();
