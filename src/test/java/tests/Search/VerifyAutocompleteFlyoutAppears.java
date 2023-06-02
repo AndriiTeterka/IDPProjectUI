@@ -2,7 +2,7 @@ package tests.Search;
 
 import io.qameta.allure.Description;
 import org.testng.annotations.Test;
-import tests.BaseTest;
+import tests.Base.BaseTest;
 
 public class VerifyAutocompleteFlyoutAppears extends BaseTest {
 

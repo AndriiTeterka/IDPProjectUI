@@ -1,9 +1,8 @@
 package tests.Search;
 
-import com.codeborne.selenide.Selenide;
 import io.qameta.allure.Description;
 import org.testng.annotations.Test;
-import tests.BaseTest;
+import tests.Base.BaseTest;
 import utils.ConfigProvider;
 
 public class VerifySelectionOfAutocompleteSuggestion extends BaseTest {

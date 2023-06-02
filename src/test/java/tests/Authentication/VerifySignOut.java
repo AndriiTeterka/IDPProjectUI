@@ -3,7 +3,7 @@ package tests.Authentication;
 import io.qameta.allure.Description;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import tests.BaseTest;
+import tests.Base.BaseTest;
 import utils.ConfigProvider;
 
 public class VerifySignOut extends BaseTest {

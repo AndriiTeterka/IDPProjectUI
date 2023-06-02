@@ -3,7 +3,7 @@ package tests.Ordering.Checkout;
 import com.github.javafaker.Faker;
 import io.qameta.allure.Description;
 import org.testng.annotations.Test;
-import tests.BaseTest;
+import tests.Base.BaseTest;
 import utils.ConfigProvider;
 
 public class VerifyAddingNewShippingAddressOnCheckout extends BaseTest {

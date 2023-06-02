@@ -3,7 +3,7 @@ package tests.Ordering.Order_Details;
 import com.github.javafaker.Faker;
 import io.qameta.allure.Description;
 import org.testng.annotations.Test;
-import tests.BaseTest;
+import tests.Base.BaseTest;
 import utils.ConfigProvider;
 
 public class VerifyAddToCartButtonRedirectsToOrderConfirmationPage extends BaseTest {

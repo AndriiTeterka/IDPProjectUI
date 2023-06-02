@@ -1,8 +1,7 @@
-package tests;
+package tests.Base;
 
 import org.testng.IAnnotationTransformer;
 import org.testng.IRetryAnalyzer;
-import org.testng.ITestListener;
 import org.testng.ITestResult;
 import org.testng.annotations.ITestAnnotation;
 

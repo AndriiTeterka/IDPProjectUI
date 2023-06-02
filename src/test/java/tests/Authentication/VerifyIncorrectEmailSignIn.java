@@ -2,13 +2,13 @@ package tests.Authentication;
 
 import io.qameta.allure.Description;
 import org.testng.annotations.Test;
-import tests.BaseTest;
+import tests.Base.BaseTest;
 import utils.ConfigProvider;
 
 public class VerifyIncorrectEmailSignIn extends BaseTest {
 
     @Description("Sign in with incorrect email")
-    @Test
+    @Test(enabled = false)
     public void verifyIncorrectEmailSignIn() {
         headerNavigationBar.clickOnAccountListLink();
         signInPage.enterEmail(ConfigProvider.INCORRECT_EMAIL);

@@ -2,19 +2,19 @@
 <suite name="IDP Project Tests" parallel="classes" thread-count="1">
     <listeners>
         <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
-        <listener class-name="tests.TestRetryAnalyzer"/>
+        <listener class-name="tests.Base.TestRetryAnalyzer"/>
     </listeners>
     <test name="Smoke Tests">
         <packages>
             <package name="tests.Authentication.*"/>
-           <!-- <package name="tests.Navigation.*"/>
+            <package name="tests.Navigation.*"/>
             <package name="tests.Ordering.Cart.*"/>
             <package name="tests.Ordering.Cart_Flyout.*"/>
             <package name="tests.Ordering.Checkout.*"/>
             <package name="tests.Ordering.Home_Page.*"/>
             <package name="tests.Ordering.Order_Confirmation.*"/>
             <package name="tests.Ordering.Order_Details.*"/>
-            <package name="tests.Search.*"/>-->
+            <package name="tests.Search.*"/>
         </packages>
         <!--<classes>
             <class name="tests.Ordering.Checkout.VerifyAddingNewShippingAddressOnCheckout"/>

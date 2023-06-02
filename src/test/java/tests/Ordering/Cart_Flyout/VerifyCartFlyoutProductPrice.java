@@ -3,7 +3,7 @@ package tests.Ordering.Cart_Flyout;
 import com.github.javafaker.Faker;
 import io.qameta.allure.Description;
 import org.testng.annotations.Test;
-import tests.BaseTest;
+import tests.Base.BaseTest;
 import utils.ConfigProvider;
 
 public class VerifyCartFlyoutProductPrice extends BaseTest {

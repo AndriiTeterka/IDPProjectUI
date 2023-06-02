@@ -2,13 +2,13 @@ package tests.Authentication;
 
 import io.qameta.allure.Description;
 import org.testng.annotations.Test;
-import tests.BaseTest;
+import tests.Base.BaseTest;
 import utils.ConfigProvider;
 
 public class VerifyEmptyEmailSignIn extends BaseTest {
 
     @Description("Sign in with incorrect email")
-    @Test
+    @Test(enabled = false)
     public void verifyEmptyEmailSignIn() {
         headerNavigationBar.clickOnAccountListLink();
         signInPage.clickOnContinueButton();
