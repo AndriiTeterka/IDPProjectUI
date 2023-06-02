@@ -9,6 +9,10 @@ import utils.LogUtils;
 
 import static com.codeborne.selenide.Selenide.*;
 
+/**
+ This class represents the Cart Page of the application.
+ It contains methods to interact with the cart and perform various actions.
+ */
 public class CartPage extends BasePage {
 
     private final ElementsCollection addedProductTitles = $$x("//span[@class='a-list-item']/a/span/span");
@@ -19,6 +23,12 @@ public class CartPage extends BasePage {
     private final SelenideElement emptyCartHeading = $x("//div[@id='sc-active-cart']//h1[@class]");
     private final SelenideElement itemRemovedFromCartMessage = $x("//form[@id='activeCartViewForm']//div[@class='sc-list-item-removed-msg']");
 
+    /**
+     * Verifies if the added products' titles contain the specified text.
+     *
+     * @param text The text to be verified.
+     * @return {@code true} if the text is found in the titles of the added products, {@code false} otherwise.
+     */
     @Step("Verify added products title contains text")
     public boolean isAddedProductsTitleContainsText(String text) {
         LogUtils.logInfoMessage("Verify added products title contains text");
@@ -32,6 +42,12 @@ public class CartPage extends BasePage {
         return false;
     }
 
+    /**
+     * Verifies if the added products' prices contain the specified text.
+     *
+     * @param text The text to be verified.
+     * @return {@code true} if the text is found in the prices of the added products, {@code false} otherwise.
+     */
     @Step("Verify added products price contains text")
     public boolean isAddedProductsPriceContainsText(String text) {
         LogUtils.logInfoMessage("Verify added products price contains text");
@@ -45,6 +61,11 @@ public class CartPage extends BasePage {
         return false;
     }
 
+    /**
+     * Calculates the subtotal of the added products.
+     *
+     * @return The subtotal as a double value.
+     */
     @Step("Calculate added products subtotal")
     public double calculateAddedProductsSubtotal() {
         LogUtils.logInfoMessage("Calculate added products subtotal");
@@ -58,6 +79,11 @@ public class CartPage extends BasePage {
         return subtotal;
     }
 
+    /**
+     * Gets the subtotal of the added products as a double value.
+     *
+     * @return The subtotal as a double value.
+     */
     @Step("Get added products subtotal as double")
     public double getAddedProductsSubtotalAsDouble() {
         LogUtils.logInfoMessage("Verify added products price contains text");
@@ -66,12 +92,18 @@ public class CartPage extends BasePage {
                 .replaceAll("\\,", ""));
     }
 
+    /**
+     * Clicks on the Proceed to Checkout button.
+     */
     @Step("Click on Proceed to Checkout button")
     public void clickOnProceedToCheckoutButton() {
         LogUtils.logInfoMessage("Click on Proceed to Checkout button");
         proceedToCheckoutButton.shouldBe(Condition.visible).click();
     }
 
+    /**
+     * Removes all items from the cart.
+     */
     @Step("Remove all items from cart")
     public void removeAllItemsFromCart() {
         LogUtils.logInfoMessage("Remove all items from cart");
