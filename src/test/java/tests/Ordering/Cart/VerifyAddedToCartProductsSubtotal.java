@@ -7,10 +7,17 @@ import org.testng.annotations.Test;
 import tests.Base.BaseTest;
 import utils.ConfigProvider;
 
+/**
+ The VerifyAddedToCartProductsSubtotal class is a test class that verifies the subtotal of the added products in the cart.
+ It extends the BaseTest class to inherit the setup and teardown methods.
+ Note: The test assumes that a search is performed for a specific item (TV_NAME) and two search results are selected.
+ The items are added to the cart, and it is verified that the subtotal of the added products matches the calculated subtotal.
+ After the verification, all items are removed from the cart for cleanup.
+ */
 public class VerifyAddedToCartProductsSubtotal extends BaseTest {
 
     @Description("Verify added to cart products subtitle")
-    @Test
+    @Test(description = "Verify added to cart products subtitle")
     public void verifySelectedProductTitle() {
         Faker faker = new Faker();
 

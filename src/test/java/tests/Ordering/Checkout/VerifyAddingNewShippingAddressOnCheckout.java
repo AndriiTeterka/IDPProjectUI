@@ -6,10 +6,17 @@ import org.testng.annotations.Test;
 import tests.Base.BaseTest;
 import utils.ConfigProvider;
 
+/**
+ The VerifyAddingNewShippingAddressOnCheckout class is a test class that verifies the functionality of adding
+ a new shipping address during the checkout process. It checks whether a new shipping address can be added
+ successfully and used for the checkout. The test assumes that the user is signed in and has added a product to the cart.
+ It extends the BaseTest class to inherit the setup and teardown methods.
+ Note: The test uses a Faker library to generate random data for testing purposes, such as the phone number and address.
+ */
 public class VerifyAddingNewShippingAddressOnCheckout extends BaseTest {
 
     @Description("Verify adding a new shipping address on checkout")
-    @Test
+    @Test(description = "Verify adding a new shipping address on checkout")
     public void VerifyAddingNewShippingAddressOnCheckout() {
         Faker faker = new Faker();
 

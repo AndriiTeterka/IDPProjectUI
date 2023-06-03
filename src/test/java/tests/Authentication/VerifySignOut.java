@@ -6,10 +6,14 @@ import org.testng.annotations.Test;
 import tests.Base.BaseTest;
 import utils.ConfigProvider;
 
+/**
+ The VerifySignOut class is used to test the sign-out functionality.
+ It extends the BaseTest class and contains a single test method.
+ */
 public class VerifySignOut extends BaseTest {
 
     @Description("User sign out")
-    @Test
+    @Test(description = "User sign out")
     public void verifySignOut() {
         headerNavigationBar.clickOnAccountListLink();
         signInPage.enterEmail(ConfigProvider.EMAIL2);

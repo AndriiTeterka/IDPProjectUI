@@ -6,10 +6,20 @@ import org.testng.annotations.Test;
 import tests.Base.BaseTest;
 import utils.ConfigProvider;
 
+
+/**
+ The VerifyProductImageIsDisplayed class is a test class that verifies whether the product image is displayed
+ on the order confirmation page. It assumes that the user has added a product to the cart and performs the following steps:
+ Search for a specific item using the search bar.
+ Select a random search result item with price.
+ Click on the "Add to Cart" button on the product details page.
+ Verify that the product image is displayed on the order confirmation page.
+ Note: The test uses a Faker library to generate random data for testing purposes, such as the order number.
+ */
 public class VerifyProductImageIsDisplayed extends BaseTest {
 
     @Description("Verify product subtotal price")
-    @Test
+    @Test(description = "Verify product subtotal price")
     public void verifyProductSubtotalPrice() {
         Faker faker = new Faker();
 

@@ -11,6 +11,11 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import utils.ConfigProvider;
 
+/**
+ The BaseTest class is the base class for all test classes in the project.
+ It initializes the necessary pages and components and provides setup and teardown methods.
+ Note: The TODO comments in the code indicate areas that need to be implemented or customized.
+ */
 public class BaseTest {
     protected CartPage cartPage;
     protected CartFlyout cartFlyout;
@@ -31,6 +36,10 @@ public class BaseTest {
     protected YourAccountPage yourAccountPage;
     protected YourAddressesPage yourAddressesPage;
 
+    /**
+     * Method to perform the initial setup for the tests.
+     * It sets up the WebDriver, Selenide configuration, and Allure Selenide listener.
+     */
     public void setUp() {
         //TODO implement driver factory
         WebDriverManager.chromedriver().setup();
@@ -41,6 +50,11 @@ public class BaseTest {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
     }
 
+    /**
+     * Method to perform the setup before each test method.
+     * It calls the setUp, initPages, and initComponents methods,
+     * and opens the URL specified in the ConfigProvider.
+     */
     @BeforeMethod(alwaysRun = true)
     public void init() {
         setUp();
@@ -49,11 +63,18 @@ public class BaseTest {
         Selenide.open(ConfigProvider.URL);
     }
 
+    /**
+     * Method to perform the teardown after each test method.
+     * It closes the WebDriver.
+     */
     @AfterMethod(alwaysRun = true)
     public void tearDown() {
         Selenide.closeWebDriver();
     }
 
+    /**
+     * Method to initialize the pages used in the tests.
+     */
     public void initPages() {
         cartPage = new CartPage();
         homePage = new HomePage();
@@ -67,6 +88,9 @@ public class BaseTest {
         yourAddressesPage = new YourAddressesPage();
     }
 
+    /**
+     * Method to initialize the components used in the tests.
+     */
     public void initComponents() {
         cartFlyout = new CartFlyout();
         filtersSidebar = new FiltersSidebar();
