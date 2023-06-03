@@ -16,9 +16,9 @@ import utils.ConfigProvider;
  */
 public class VerifyCartFlyoutDeleteButtonRemovesProduct extends BaseTest {
 
-    @Description("Verify cart flyout product price")
-    @Test(description = "Verify cart flyout product price")
-    public void verifyCartFlyoutProductPrice() {
+    @Description("Verify cart flyout delete button removes product")
+    @Test(description = "Verify cart flyout delete button removes product")
+    public void verifyCartFlyoutDeleteButtonRemovesProduct() {
         Faker faker = new Faker();
 
         searchBar.searchForItem(ConfigProvider.TV_NAME);

@@ -22,9 +22,9 @@ import utils.ConfigProvider;
  */
 public class VerifyPreviousSearchIsDisplayedAsSuggestion extends BaseTest {
 
-    @Description("Verify selection of autocomplete suggestion")
-    @Test(description = "Verify selection of autocomplete suggestion")
-    public void verifySelectionOfAutocompleteSuggestion() {
+    @Description("Verify previous search is displayed as suggestion")
+    @Test(description = "Verify previous search is displayed as suggestion")
+    public void verifyPreviousSearchIsDisplayedAsSuggestion() {
         String searchValue = ConfigProvider.LAPTOP_NAME;
 
         searchBar.clickOnSearchBar();

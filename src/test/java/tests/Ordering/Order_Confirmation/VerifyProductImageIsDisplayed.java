@@ -18,9 +18,9 @@ import utils.ConfigProvider;
  */
 public class VerifyProductImageIsDisplayed extends BaseTest {
 
-    @Description("Verify product subtotal price")
-    @Test(description = "Verify product subtotal price")
-    public void verifyProductSubtotalPrice() {
+    @Description("Verify product image is displayed")
+    @Test(description = "Verify product image is displayed")
+    public void verifyProductImageIsDisplayed() {
         Faker faker = new Faker();
 
         searchBar.searchForItem(ConfigProvider.TV_NAME);

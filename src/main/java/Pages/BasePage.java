@@ -1,6 +1,7 @@
 package Pages;
 
 import com.codeborne.selenide.Selenide;
+import utils.LogUtils;
 
 /**
  * Represents the base page for all pages in the application.
@@ -24,6 +25,7 @@ public class BasePage {
     public void pressBack(int amount) {
         int count = 1;
         while (count <= amount) {
+            LogUtils.logInfoMessage("Press Back");
             Selenide.back();
             count++;
         }

@@ -19,7 +19,7 @@ public class VerifyAddedToCartProductPrice extends BaseTest {
 
     @Description("Verify added to cart product price")
     @Test(description = "Verify added to cart product price")
-    public void verifySelectedProductTitle() {
+    public void verifyAddedToCartProductPrice() {
         Faker faker = new Faker();
 
         searchBar.searchForItem(ConfigProvider.TV_NAME);

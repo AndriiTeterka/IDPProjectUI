@@ -16,9 +16,9 @@ import utils.ConfigProvider;
  */
 public class VerifyAddedToCartProductsSubtotal extends BaseTest {
 
-    @Description("Verify added to cart products subtitle")
-    @Test(description = "Verify added to cart products subtitle")
-    public void verifySelectedProductTitle() {
+    @Description("Verify added to cart products subtotal")
+    @Test(description = "Verify added to cart products subtotal")
+    public void verifyAddedToCartProductsSubtotal() {
         Faker faker = new Faker();
 
         searchBar.searchForItem(ConfigProvider.TV_NAME);
