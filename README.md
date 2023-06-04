@@ -41,10 +41,10 @@ To execute the test suite defined in the testng.xml file, use the following comm
 mvn test
 ```
 ## Allure Reports
-To view generated reports after GitHub Actions tests run:
-1. Navigate to Actions tab
-2. Select *pages-build-deployment* workflow
-3. Select latest run
-4. Click on generated link on *deploy* node
+To access the generated reports after running the tests with GitHub Actions, follow the steps below:
+1. Navigate to the *Actions* tab in the GitHub repository.
+2. Select the workflow named *pages-build-deployment*.
+3. Choose the latest run from the list of workflow runs.
+5. Click on the link provided in the *deploy* node to access the generated reports.
   
 ![image](https://github.com/AndriiTeterka/IDPProjectUI/assets/46166177/e45833b1-6ee8-4f23-bfe2-5c9baa94d21d)
