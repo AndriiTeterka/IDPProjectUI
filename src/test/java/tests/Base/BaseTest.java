@@ -43,7 +43,8 @@ public class BaseTest {
      */
     public void setUp() {
         //TODO implement driver factory
-        WebDriverManager.chromedriver().setup();
+        WebDriverManager.chromedriver().clearDriverCache().setup();
+        WebDriverManager.chromedriver().clearResolutionCache().setup();
         Configuration.browserCapabilities = new ChromeOptions()
                 .addArguments("--headless")
                 .addArguments("--no-sandbox")
