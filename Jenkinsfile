@@ -13,6 +13,7 @@ pipeline {
                 sh 'sudo apt-get update'
                 sh 'sudo apt-get install -y maven'
             }
+        }
 
         stage('Build and Test') {
             steps {
