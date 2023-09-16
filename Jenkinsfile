@@ -22,14 +22,14 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                // Your deployment steps here
+                echo 'Deploying'
             }
         }
     }
 
     post {
         always {
-            // Archive build artifacts or perform other cleanup tasks
+            echo 'post staff'
         }
     }
 }
