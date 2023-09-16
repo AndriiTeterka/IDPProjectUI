@@ -1,0 +1,1 @@
+[{"uid":"577d88bf4f82aa85","name":"Verify top rated products on items list page contain category title","time":{"start":1694873683409,"stop":1694873683413,"duration":4},"status":"skipped","severity":"normal"},{"uid":"3953fab6049a2473","name":"init","time":{"start":1694873683379,"stop":1694873683380,"duration":1},"status":"broken","severity":"normal"}]
