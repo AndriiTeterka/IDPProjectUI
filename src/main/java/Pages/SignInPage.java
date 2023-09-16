@@ -29,6 +29,7 @@ public class SignInPage extends BasePage {
     public void enterEmail(String email) {
         LogUtils.logInfoMessage("Enter user email");
         emailInput.shouldBe(Condition.visible).setValue(email);
+
     }
 
     /**
