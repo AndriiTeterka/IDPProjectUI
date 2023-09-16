@@ -33,7 +33,11 @@ pipeline {
 
     post {
         always {
-            echo 'post staff'
+            allure([
+                includeProperties: false,
+                jdk: '',
+                results: [[path: 'allure-results']]
+            ])
         }
     }
 }
