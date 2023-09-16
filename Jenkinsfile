@@ -7,12 +7,9 @@ pipeline {
                 checkout scm
             }
         }
-
-        stage('Install Maven') {
-            steps {
-                sh 'apt-get update'
-                sh 'apt-get install -y maven'
-            }
+        
+        tools {
+            maven 'maven'
         }
 
         stage('Build and Test') {
