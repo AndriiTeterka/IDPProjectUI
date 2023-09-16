@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    tools {
+            maven 'maven'
+        }
+
     stages {
         stage('Checkout') {
             steps {
@@ -8,10 +12,6 @@ pipeline {
             }
         }
         
-        tools {
-            maven 'maven'
-        }
-
         stage('Build and Test') {
             steps {
                 sh 'mvn clean compile test'
