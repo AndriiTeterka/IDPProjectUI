@@ -6,7 +6,6 @@ C:\Users\andrii.teterka\IdeaProjects\IDPProjectUI\src\test\java\tests\Ordering\C
 C:\Users\andrii.teterka\IdeaProjects\IDPProjectUI\src\test\java\tests\Ordering\Order_Details\VerifySelectedProductTitle.java
 C:\Users\andrii.teterka\IdeaProjects\IDPProjectUI\src\test\java\tests\Ordering\Cart\VerifyAddedToCartProductTitle.java
 C:\Users\andrii.teterka\IdeaProjects\IDPProjectUI\src\test\java\tests\Ordering\Cart_Flyout\VerifyCartFlyoutSubtotalPrice.java
-C:\Users\andrii.teterka\IdeaProjects\IDPProjectUI\src\test\java\tests\TestRetryAnalyzer.java
 C:\Users\andrii.teterka\IdeaProjects\IDPProjectUI\src\test\java\tests\Authentication\VerifySignOut.java
 C:\Users\andrii.teterka\IdeaProjects\IDPProjectUI\src\test\java\tests\Ordering\Order_Confirmation\VerifyGoToCartButtonRedirectsToCartPage.java
 C:\Users\andrii.teterka\IdeaProjects\IDPProjectUI\src\test\java\tests\Ordering\Order_Confirmation\VerifyProductImageIsDisplayed.java
@@ -24,6 +23,7 @@ C:\Users\andrii.teterka\IdeaProjects\IDPProjectUI\src\test\java\tests\Ordering\O
 C:\Users\andrii.teterka\IdeaProjects\IDPProjectUI\src\test\java\tests\Search\VerifyPreviousSearchIsDisplayedAsSuggestion.java
 C:\Users\andrii.teterka\IdeaProjects\IDPProjectUI\src\test\java\tests\Navigation\VerifyTopRatedProductsOnItemsListPageContainCategoryTitle.java
 C:\Users\andrii.teterka\IdeaProjects\IDPProjectUI\src\test\java\tests\Authentication\VerifyIncorrectEmailSignIn.java
+C:\Users\andrii.teterka\IdeaProjects\IDPProjectUI\src\test\java\tests\Base\BaseTest.java
 C:\Users\andrii.teterka\IdeaProjects\IDPProjectUI\src\test\java\tests\Ordering\Order_Confirmation\VerifyProceedToCheckoutButtonRedirectsToProductCheckoutPage.java
 C:\Users\andrii.teterka\IdeaProjects\IDPProjectUI\src\test\java\tests\Search\VerifyAutocompleteSuggestionsIncludeSearchValue.java
 C:\Users\andrii.teterka\IdeaProjects\IDPProjectUI\src\test\java\tests\Search\VerifySearchForItem.java
@@ -33,7 +33,7 @@ C:\Users\andrii.teterka\IdeaProjects\IDPProjectUI\src\test\java\tests\Ordering\C
 C:\Users\andrii.teterka\IdeaProjects\IDPProjectUI\src\test\java\tests\Ordering\Cart\VerifyAddedToCartProductPrice.java
 C:\Users\andrii.teterka\IdeaProjects\IDPProjectUI\src\test\java\tests\Search\VerifyUpdatingSearchDropdownByFilter.java
 C:\Users\andrii.teterka\IdeaProjects\IDPProjectUI\src\test\java\tests\Ordering\Order_Confirmation\VerifyProductSuccessMessageIsDisplayed.java
-C:\Users\andrii.teterka\IdeaProjects\IDPProjectUI\src\test\java\tests\BaseTest.java
 C:\Users\andrii.teterka\IdeaProjects\IDPProjectUI\src\test\java\tests\Ordering\Order_Details\VerifySelectedProductPrice.java
+C:\Users\andrii.teterka\IdeaProjects\IDPProjectUI\src\test\java\tests\Base\TestRetryAnalyzer.java
 C:\Users\andrii.teterka\IdeaProjects\IDPProjectUI\src\test\java\tests\Ordering\Cart_Flyout\VerifyCartFlyoutProductPrice.java
 C:\Users\andrii.teterka\IdeaProjects\IDPProjectUI\src\test\java\tests\Authentication\VerifyEmptyEmailSignIn.java

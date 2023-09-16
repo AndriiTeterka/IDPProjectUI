@@ -43,7 +43,7 @@ public class BaseTest {
     public void setUp() {
         //TODO implement driver factory
         WebDriverManager.chromedriver().setup();
-        Configuration.driverManagerEnabled = true;
+        //Configuration.driverManagerEnabled = true;
         Configuration.headless = true;
         Configuration.timeout = 6000;
         Configuration.reportsFolder = "target/allure-results";
